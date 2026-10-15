@@ -1,0 +1,868 @@
+
+/* =========================
+   全体の基本設定
+========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 20px;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, "Noto Sans JP", sans-serif;
+    color: #172b52;
+    background: #ffffff;
+    line-height: 1.7;
+    font-size: 14px;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+::selection {
+    color: white;
+    background: #1680ff;
+}
+
+
+/* =========================
+   シュインッ！画面演出
+========================= */
+
+.page-transition {
+    position: fixed;
+    top: 0;
+    left: -120%;
+    width: 80%;
+    height: 100%;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+
+    background: linear-gradient(
+        110deg,
+        transparent 0%,
+        rgba(0, 180, 255, 0.12) 25%,
+        rgba(0, 200, 255, 0.85) 50%,
+        rgba(120, 230, 255, 0.5) 60%,
+        transparent 100%
+    );
+
+    transform: skewX(-18deg);
+    filter: drop-shadow(0 0 18px #00bfff);
+}
+
+.page-transition.active {
+    animation: swoosh 0.85s ease-in-out both;
+}
+
+@keyframes swoosh {
+    0% {
+        left: -120%;
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    65% {
+        opacity: 1;
+    }
+
+    100% {
+        left: 150%;
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   1. メイン画面
+   背景画像と背景色は維持
+========================= */
+
+.hero {
+    min-height: 370px;
+    padding: 18px 5% 40px;
+    color: white;
+
+    background-color: #ffffff;
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(3, 20, 43, 0.90) 0%,
+            rgba(3, 20, 43, 0.55) 42%,
+            rgba(3, 20, 43, 0.08) 100%
+        ),
+        url("city.jpg");
+
+    background-size: cover;
+    background-position: center 45%;
+    animation: heroFadeIn 1s ease-out both;
+}
+
+@keyframes heroFadeIn {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* =========================
+   ナビゲーション
+========================= */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.nav-links {
+    display: flex;
+    gap: 22px;
+}
+
+.nav-links a {
+    position: relative;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transition: opacity 0.2s ease;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.25s ease;
+}
+
+.nav-links a:hover {
+    opacity: 0.8;
+}
+
+.nav-links a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+
+/* =========================
+   メインの自己紹介
+========================= */
+
+.hero-content {
+    max-width: 550px;
+    margin-top: 31px;
+}
+
+.greeting {
+    margin: 0 0 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.hero-content h1 {
+    margin: 0 0 5px;
+    font-size: clamp(29px, 3.8vw, 40px);
+    line-height: 1.35;
+}
+
+.hero-content h2 {
+    margin: 8px 0 12px;
+    font-size: 17px;
+}
+
+.intro {
+    margin: 12px 0 19px;
+    font-size: 13px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.button {
+    display: inline-block;
+    padding: 8px 17px;
+    border: 1px solid white;
+    border-radius: 28px;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 16px rgba(0, 0, 0, 0.15);
+}
+
+.button-primary {
+    background: #1680ff;
+    border-color: #1680ff;
+}
+
+.button-primary:hover {
+    background: #0868df;
+}
+
+.button-outline {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.button-outline:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+
+/* =========================
+   ページを開いたときの登場演出
+========================= */
+
+body:not(.page-loaded) .hero-content {
+    opacity: 0;
+}
+
+.page-loaded .hero-content {
+    animation: slideUp 0.9s ease-out both;
+}
+
+.page-loaded .greeting {
+    animation: slideUp 0.65s ease-out 0.1s both;
+}
+
+.page-loaded .hero-content h1 {
+    animation: slideUp 0.65s ease-out 0.22s both;
+}
+
+.page-loaded .hero-content h2 {
+    animation: slideUp 0.65s ease-out 0.34s both;
+}
+
+.page-loaded .hero-content .intro {
+    animation: slideUp 0.65s ease-out 0.46s both;
+}
+
+.page-loaded .hero-buttons {
+    animation: slideUp 0.65s ease-out 0.58s both;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+        filter: blur(3px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+}
+
+
+/* =========================
+   メインコンテンツ
+========================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 23px 5% 12px;
+}
+
+.section {
+    margin-bottom: 30px;
+    scroll-margin-top: 20px;
+}
+
+.section-title {
+    margin: 0 0 12px;
+    font-size: 21px;
+    font-weight: bold;
+    line-height: 1.5;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 13px;
+}
+
+.section-heading .section-title {
+    margin-bottom: 0;
+}
+
+.more-link {
+    color: #1675ed;
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+
+/* =========================
+   スクロールでふわっと登場
+========================= */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(25px);
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.3, 1);
+}
+
+.reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* カードを順番に表示 */
+
+.card-grid .reveal:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.card-grid .reveal:nth-child(3) {
+    transition-delay: 0.2s;
+}
+
+.card-grid .reveal:nth-child(4) {
+    transition-delay: 0.3s;
+}
+
+
+/* =========================
+   2. プロフィール
+========================= */
+
+.profile {
+    display: grid;
+    grid-template-columns: 180px minmax(0, 1fr);
+    align-items: center;
+    gap: 25px;
+    padding: 5px 0 8px;
+}
+
+.profile-photo img {
+    display: block;
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    object-position: center 45%;
+    border-radius: 50%;
+}
+
+.profile-content p {
+    margin: 0 0 12px;
+    font-size: 12px;
+    color: #405778;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.tags span {
+    display: inline-block;
+    padding: 3px 11px;
+    border-radius: 20px;
+    background: #eaf3ff;
+    color: #1769d2;
+    font-size: 10px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   3. 学習記録とカード
+========================= */
+
+.card-grid {
+    display: grid;
+    gap: 12px;
+}
+
+.learning-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.card {
+    min-width: 0;
+    padding: 15px;
+    border: 1px solid #dce8f9;
+    border-radius: 9px;
+    background: white;
+    box-shadow: 0 3px 12px rgba(35, 77, 130, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #b9d3fa;
+    box-shadow: 0 8px 22px rgba(35, 77, 130, 0.09);
+}
+
+.card-title {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+}
+
+.card-icon {
+    color: #1675ff;
+    font-size: 21px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.card-title h3,
+.hobby-card h3 {
+    margin: 0;
+    font-size: 13px;
+}
+
+.arrow {
+    margin-left: auto;
+    color: #7895c1;
+    font-size: 20px;
+}
+
+.card p {
+    margin: 0;
+    color: #4b6285;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.learning-status {
+    display: inline-block;
+    margin: 12px 0 0 !important;
+    padding: 4px 10px;
+    border-radius: 20px;
+    background: #eaf3ff;
+    color: #1769d2 !important;
+    font-size: 10px !important;
+    font-weight: bold;
+}
+
+
+/* =========================
+   4. 制作物
+========================= */
+
+.work-card {
+    display: grid;
+    grid-template-columns: 52px minmax(0, 1fr);
+    align-items: start;
+    gap: 17px;
+    margin-bottom: 12px;
+    padding: 17px;
+    border: 1px solid #dce8f9;
+    border-radius: 9px;
+    background: #ffffff;
+    box-shadow: 0 3px 12px rgba(35, 77, 130, 0.045);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.work-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(35, 77, 130, 0.08);
+}
+
+.work-symbol {
+    display: grid;
+    width: 48px;
+    height: 48px;
+    place-items: center;
+    border-radius: 9px;
+    background: #eaf3ff;
+    color: #1675ff;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.work-content h3 {
+    margin: 0 0 6px;
+    font-size: 14px;
+}
+
+.work-content p {
+    margin: 0;
+    color: #4b6285;
+    font-size: 12px;
+}
+
+.work-content .tags {
+    margin-top: 10px;
+}
+
+
+/* =========================
+   5. 趣味カード
+========================= */
+
+.hobby-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.hobby-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    padding: 14px;
+}
+
+.hobby-icon {
+    color: #1675ff;
+    font-size: 22px;
+}
+
+.hobby-card p {
+    flex: 1;
+    margin: 0;
+    color: #4b6285;
+    font-size: 11px;
+    line-height: 1.8;
+}
+
+.hobby-link {
+    margin-top: 5px;
+    color: #1675ed;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   6. AIアシスタント
+========================= */
+
+.ai-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin: 18px 0 0;
+    padding: 18px;
+    border: 1px solid #d8e8ff;
+    border-radius: 10px;
+    background: #eaf3ff;
+}
+
+.ai-heading {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.ai-icon {
+    color: #1675ff;
+    font-size: 27px;
+    font-weight: bold;
+}
+
+.ai-heading h2 {
+    margin: 0 0 5px;
+    font-size: 16px;
+}
+
+.ai-heading h2 span {
+    font-size: 11px;
+    font-weight: normal;
+}
+
+.ai-heading p {
+    margin: 0;
+    color: #4b6285;
+    font-size: 11px;
+}
+
+.ai-form {
+    display: flex;
+    flex: 0 1 370px;
+    gap: 7px;
+    padding: 5px;
+    border: 1px solid #d6e5fa;
+    border-radius: 8px;
+    background: white;
+}
+
+.ai-form input {
+    width: 100%;
+    min-width: 0;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font: inherit;
+    font-size: 11px;
+}
+
+.ai-form button {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 6px;
+    background: #1680ff;
+    color: white;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.ai-form button:disabled {
+    opacity: 0.85;
+    cursor: not-allowed;
+}
+
+
+/* =========================
+   7. これから追加するもの
+========================= */
+
+.future-section {
+    padding: 19px;
+    border: 1px solid #dce8f9;
+    border-radius: 9px;
+    background: #ffffff;
+}
+
+.future-section > p {
+    margin: 0;
+    color: #4b6285;
+    font-size: 12px;
+}
+
+.future-line {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    color: #1675ed;
+    font-size: 10px;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+}
+
+.future-dot {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #83b5ff;
+}
+
+
+/* =========================
+   8. フッター
+========================= */
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+    margin-top: 22px;
+    padding: 18px;
+    background: #f8faff;
+    color: #647999;
+    font-size: 12px;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #1675ed;
+    transition: color 0.2s ease;
+}
+
+footer a:hover {
+    color: #084fae;
+}
+
+
+/* =========================
+   スマートフォン向け
+========================= */
+
+@media (max-width: 750px) {
+    .hero {
+        min-height: 400px;
+        padding: 18px 6% 38px;
+        background-position: center 45%;
+    }
+
+    .navbar {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        gap: 12px 17px;
+    }
+
+    .hero-content {
+        margin-top: 38px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    main {
+        padding: 20px 5%;
+    }
+
+    .profile {
+        grid-template-columns: 130px minmax(0, 1fr);
+        gap: 18px;
+    }
+
+    .profile-photo img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .learning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .ai-section {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .ai-form {
+        flex: auto;
+        width: 100%;
+    }
+}
+
+@media (max-width: 500px) {
+    .profile {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .profile-photo img {
+        width: 145px;
+        height: 145px;
+    }
+
+    .hero-content h1 {
+        font-size: 29px;
+    }
+
+    .hero-content h2 {
+        font-size: 15px;
+    }
+
+    .section-title {
+        font-size: 19px;
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .work-card {
+        grid-template-columns: 40px minmax(0, 1fr);
+        gap: 12px;
+        padding: 13px;
+    }
+
+    .work-symbol {
+        width: 38px;
+        height: 38px;
+        font-size: 15px;
+    }
+
+    footer {
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+}
+
+@media (max-width: 350px) {
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+   動きを減らす設定への配慮
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .reveal {
+        opacity: 1;
+        transform: none;
+    }
+}

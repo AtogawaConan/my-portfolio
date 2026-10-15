@@ -1,0 +1,337 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- シュインッ！アニメーション用 -->
+    <div class="page-transition" aria-hidden="true"></div>
+
+    <!-- 1. 写真付きのメイン画面 -->
+    <header class="hero" id="top">
+        <nav class="navbar">
+            <a class="logo" href="#top">My Portfolio</a>
+
+            <div class="nav-links">
+                <a href="#profile">プロフィール</a>
+                <a href="#learning">学習記録</a>
+                <a href="#works">制作物</a>
+                <a href="#hobbies">好きなこと</a>
+            </div>
+        </nav>
+
+        <div class="hero-content">
+            <p class="greeting">こんにちは！</p>
+            <h1>AtogawaConanです。</h1>
+            <h2>Web開発とAIを勉強中の大学生。</h2>
+
+            <p class="intro">
+                好きなことを楽しみながら、<br>
+                実際にものを作って学んでいきたいです。
+            </p>
+
+            <div class="hero-buttons">
+                <a class="button button-primary" href="#learning">
+                    学習記録を見る
+                </a>
+                <a class="button button-outline" href="#works">
+                    制作物を見る
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- 2. プロフィール -->
+        <section class="profile section reveal" id="profile">
+            <div class="profile-photo">
+                <img src="profile.png" alt="プロフィール写真">
+            </div>
+
+            <div class="profile-content">
+                <h2 class="section-title">プロフィール</h2>
+
+                <p>
+                    都会の大学に通う理学部の1年生です。<br>
+                    まだ、専攻科目は決まってなくて２年生になってから考えます。<br>
+                    プログラミング、AI、ゲーム、サイクリング、料理、アニメ、会話など<br>
+                    いろいろなことに興味があります。<br>
+                    現在は、AIを活用したWebサービスを作りたいです。
+                </p>
+
+                <div class="tags">
+                    <span>大学生</span>
+                    <span>C++</span>
+                    <span>AtCoder</span>
+                    <span>AI</span>
+                    <span>サイクリング</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. 学習記録 -->
+        <section class="section reveal" id="learning">
+            <div class="section-heading">
+                <h2 class="section-title">学習記録</h2>
+                <a href="#learning" class="more-link">すべて見る →</a>
+            </div>
+
+            <div class="card-grid learning-grid">
+                <article class="card reveal">
+                    <div class="card-title">
+                        <span class="card-icon">&lt;/&gt;</span>
+                        <h3>プログラミング</h3>
+                        <span class="arrow">›</span>
+                    </div>
+                    <p>
+                        C++を中心に、AtCoderでの問題演習や
+                        アルゴリズムの学習をしています。
+                    </p>
+                    <p class="learning-status">内容を後で設定</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-title">
+                        <span class="card-icon">✿</span>
+                        <h3>AI・機械学習</h3>
+                        <span class="arrow">›</span>
+                    </div>
+                    <p>
+                        Pythonの基礎を学びながら、
+                        機械学習の仕組みを勉強する予定です。
+                    </p>
+                    <p class="learning-status">内容を後で設定</p>
+                </article>
+
+                <article class="card reveal">
+                    <div class="card-title">
+                        <span class="card-icon">▱</span>
+                        <h3>大学の勉強</h3>
+                        <span class="arrow">›</span>
+                    </div>
+                    <p>
+                        大学の授業を通じて、
+                        基礎的な知識の定着を進めています。
+                    </p>
+                    <p class="learning-status">内容を後で設定</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- 4. 制作物 -->
+        <section class="section reveal" id="works">
+            <div class="section-heading">
+                <h2 class="section-title">制作物</h2>
+            </div>
+
+            <div class="work-card reveal">
+                <div class="work-symbol">&lt;/&gt;</div>
+                <div class="work-content">
+                    <h3>自分のWebサイト</h3>
+                    <p>
+                        HTMLとCSSを使って制作しているポートフォリオです。
+                        これから機能を追加しながら、少しずつ改善していきます。
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="work-card reveal">
+                <div class="work-symbol">⌨</div>
+                <div class="work-content">
+                    <h3>プログラミング</h3>
+                    <p>
+                        AtCoderでの問題演習を通して、
+                        アルゴリズムやデータ構造を学んでいます。
+                    </p>
+                    <div class="tags">
+                        <span>C++</span>
+                        <span>AtCoder</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. 趣味 -->
+        <section class="section reveal" id="hobbies">
+            <h2 class="section-title">好きなこと・趣味</h2>
+
+            <div class="card-grid hobby-grid">
+                <a class="card hobby-card reveal"
+                   href="https://note.com/lucky_flea3807"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="hobby-icon">🎮</span>
+                    <h3>ゲーム</h3>
+                    <p>にゃんこ大戦争などのゲームが好きです。</p>
+                    <span class="hobby-link">noteで読む →</span>
+                </a>
+
+                <a class="card hobby-card reveal"
+                   href="https://note.com/lucky_flea3807"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="hobby-icon">🚲</span>
+                    <h3>サイクリング</h3>
+                    <p>景色のいい場所を走るのが好きです。</p>
+                    <span class="hobby-link">noteで読む →</span>
+                </a>
+
+                <a class="card hobby-card reveal"
+                   href="https://note.com/lucky_flea3807"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="hobby-icon">🤖</span>
+                    <h3>アニメ</h3>
+                    <p>東京グール、桃源暗鬼、ドラゴンボール、名探偵コナン、ガンダムなどが好きです。</p>
+                    <span class="hobby-link">noteで読む →</span>
+                </a>
+
+                <a class="card hobby-card reveal"
+                   href="https://note.com/lucky_flea3807"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    <span class="hobby-icon">🍳</span>
+                    <h3>料理</h3>
+                    <p>チャーハン、豚汁、野菜炒めなど、いろいろな料理に挑戦しています。</p>
+                    <span class="hobby-link">noteで読む →</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- 6. AIアシスタント欄 -->
+        <section class="ai-section reveal" id="ai">
+            <div class="ai-heading">
+                <span class="ai-icon">✦</span>
+                <div>
+                    <h2>AIアシスタント <span>（準備中）</span></h2>
+                    <p>
+                        僕の学習中のものや僕のことが詳しく聞ける
+                        AIアシスタントを準備しています。
+                    </p>
+                    <p>もうしばらくお待ちください。</p>
+                </div>
+            </div>
+
+            <form class="ai-form">
+                <input
+                    type="text"
+                    placeholder="聞きたいことを入力..."
+                    aria-label="質問内容"
+                >
+                <button type="button" disabled>送信</button>
+            </form>
+        </section>
+
+        <!-- 7. これから追加するもの -->
+        <section class="section future-section reveal" id="future">
+            <h2 class="section-title">これから追加したいもの</h2>
+            <p>
+                学習管理やWebサービスなど、自分が作りたい機能を
+                少しずつ追加していく予定です。
+            </p>
+            <div class="future-line">
+                <span>IDEAS</span>
+                <span class="future-dot"></span>
+                <span>LEARNING</span>
+                <span class="future-dot"></span>
+                <span>CREATION</span>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 8. ページ下部 -->
+    
+<footer class="footer">
+    <p>My Portfolio</p>
+
+    <div class="footer-links">
+        <a href="https://x.com/AtogawaConan000"
+           target="_blank" rel="noopener noreferrer">
+            Xのアカウント
+        </a>
+
+        <a href="https://note.com/lucky_flea3807"
+           target="_blank" rel="noopener noreferrer">
+            note
+        </a>
+
+        <a href="https://qiita.com/AtogawaConan"
+           target="_blank" rel="noopener noreferrer">
+            Qiita
+        </a>
+    </div>
+</footer>
+
+
+    <script>
+        // ページを開いたときのアニメーション
+        window.addEventListener("load", () => {
+            document.body.classList.add("page-loaded");
+        });
+
+        // メニューをクリックしたときのシュインッ！演出
+        const transition = document.querySelector(".page-transition");
+
+        document.querySelectorAll('a[href^="#"]').forEach((link) => {
+            link.addEventListener("click", (event) => {
+                const targetId = link.getAttribute("href");
+                const target = document.querySelector(targetId);
+
+                if (!target) return;
+
+                event.preventDefault();
+
+                transition.classList.remove("active");
+                void transition.offsetWidth;
+                transition.classList.add("active");
+
+                target.scrollIntoView({
+                    behavior: "smooth",
+                    block: "start"
+                });
+
+                setTimeout(() => {
+                    transition.classList.remove("active");
+                }, 850);
+            });
+        });
+
+        // スクロールしたら要素を表示
+        const revealElements = document.querySelectorAll(".reveal");
+
+        if ("IntersectionObserver" in window) {
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.12,
+                rootMargin: "0px 0px -25px 0px"
+            });
+
+            revealElements.forEach((element) => {
+                observer.observe(element);
+            });
+        } else {
+            revealElements.forEach((element) => {
+                element.classList.add("visible");
+            });
+        }
+    </script>
+
+</body>
+</html>
