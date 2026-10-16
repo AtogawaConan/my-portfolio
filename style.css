@@ -94,7 +94,7 @@ img {
 
 .hero {
     min-height: 370px;
-    padding: 18px 5% 40px;
+    padding: 100px 5% 40px;
     color: white;
 
     background-color: #ffffff;
@@ -127,12 +127,52 @@ img {
    ナビゲーション
 ========================= */
 
+
+
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+
+    /* 縦幅を広げる */
+    min-height: 76px;
+    padding: 18px 5%;
+
+    /* 通常時は背景写真になじませる */
+    background: transparent;
+    transition: background 0.3s ease;
 }
+
+.navbar.scrolled {
+    /* スクロール時は色を変える */
+    background: rgba(10, 25, 47, 0.94);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* クリック・フォーカス時の青い背景や光を抑える */
+.navbar a,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:active,
+.navbar a:focus {
+    background-color: transparent;
+    box-shadow: none;
+    outline-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+
 
 .logo {
     color: white;
@@ -739,7 +779,7 @@ footer a:hover {
 @media (max-width: 750px) {
     .hero {
         min-height: 400px;
-        padding: 18px 6% 38px;
+        padding: 105px 6% 38px;
         background-position: center 45%;
     }
 
@@ -865,4 +905,17 @@ footer a:hover {
         opacity: 1;
         transform: none;
     }
+}
+
+/* 目次をクリックしたときの青い背景や光を消す */
+.navbar a,
+.navbar a:visited,
+.navbar a:hover,
+.navbar a:active,
+.navbar a:focus,
+.navbar a:focus-visible {
+    background-color: transparent;
+    box-shadow: none;
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
 }
