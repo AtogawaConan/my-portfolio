@@ -919,3 +919,14 @@ footer a:hover {
     outline: none;
     -webkit-tap-highlight-color: transparent;
 }
+
+/* 固定した目次とページ内容の重なりを防ぐ */
+html {
+    scroll-padding-top: 100px;
+}
+
+/* 各セクションが目次の下に隠れないようにする */
+section[id],
+div[id] {
+    scroll-margin-top: 100px;
+}
