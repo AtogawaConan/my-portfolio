@@ -130,6 +130,7 @@ img {
 
 
 
+
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -143,18 +144,16 @@ img {
     box-sizing: border-box;
     z-index: 1000;
 
-    /* 縦幅を広げる */
     min-height: 76px;
     padding: 18px 5%;
 
-    /* 通常時は背景写真になじませる */
     background: transparent;
     transition: background 0.3s ease;
 }
 
+/* スクロール中も目次を読みやすくする */
 .navbar.scrolled {
-    /* スクロール時は色を変える */
-    background: rgba(10, 25, 47, 0.94);
+    background: rgba(10, 25, 47, 0.96);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -930,3 +929,14 @@ section[id],
 div[id] {
     scroll-margin-top: 100px;
 }
+
+/* 目次から少し離して見出しを表示する */
+html {
+    scroll-padding-top: 100px;
+}
+
+section[id],
+div[id] {
+    scroll-margin-top: 100px;
+}
+
