@@ -1622,4 +1622,24 @@ h3 {
         gap: 9px;
     }
 }
+/* アンケートセクション */
+.survey-section {
+    text-align: center;
+    padding: 40px 20px;
+    margin: 30px auto;
+}
 
+/* アンケートボタン */
+.survey-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: opacity 0.2s;
+}
+
+.survey-button:hover {
+    opacity: 0.75;
+}
