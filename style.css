@@ -1121,3 +1121,505 @@ body:not(.page-loaded) .hero-content {
         font-size: 11px;
     }
 }
+
+/* =====================================
+   レイアウト修正：左端の切れ・余白・文字サイズ
+   ===================================== */
+
+:root {
+    --sidebar-width: 220px;
+    --content-gap: 30px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-padding-top: 24px;
+}
+
+body {
+    font-size: 14px;
+    overflow-x: clip;
+}
+
+/* 左側の目次 */
+.sidebar {
+    width: var(--sidebar-width);
+    padding: 22px 14px 18px;
+    overflow-y: auto;
+}
+
+.logo {
+    font-size: 17px;
+}
+
+.side-nav {
+    gap: 5px;
+}
+
+.nav-link {
+    min-width: 0;
+    min-height: 39px;
+    gap: 8px;
+    padding: 8px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.nav-icon {
+    flex: 0 0 18px;
+    width: 18px;
+    font-size: 15px;
+}
+
+/* ホーム：左の目次と重ならない配置にする */
+.hero {
+    min-width: 0;
+    min-height: 540px;
+    padding: 82px 32px 72px
+        calc(var(--sidebar-width) + var(--content-gap));
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    width: 100%;
+    max-width: 850px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* ホームの写真をなくし、文章を左から表示 */
+.hero-profile {
+    display: block;
+    min-width: 0;
+}
+
+.hero-photo {
+    display: none;
+}
+
+.hero-text {
+    min-width: 0;
+    max-width: 760px;
+}
+
+.hero-text h1 {
+    font-size: clamp(29px, 3vw, 38px);
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.hero-text h2 {
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+.hero-welcome {
+    font-size: 17px;
+}
+
+.intro {
+    font-size: 14px;
+    line-height: 1.85;
+}
+
+/* SNSリンクがホーム内に収まるようにする */
+.hero-top-links {
+    right: 30px;
+    gap: 16px;
+}
+
+/* メイン本文：幅を画面内に収め、左側を切らない */
+.main-content {
+    width: auto;
+    min-width: 0;
+    max-width: none;
+    margin: 0 0 0
+        calc(var(--sidebar-width) + var(--content-gap));
+    padding: 26px var(--content-gap) 38px 0;
+}
+
+.main-content > *,
+.panel,
+.panel-heading,
+.profile-layout,
+.profile-content,
+.card-grid,
+.info-card,
+.work-card,
+.work-content,
+.ai-content {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* セクションごとの大きな囲みをなくす */
+.panel {
+    margin: 0 0 20px;
+    padding: 25px 0 27px;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(75, 105, 145, 0.2);
+    border-radius: 0;
+    box-shadow: none;
+}
+
+/* 見出しの大きさと間隔 */
+.panel-heading {
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.section-number {
+    font-size: 25px;
+}
+
+.section-title {
+    font-size: clamp(21px, 2vw, 26px);
+    line-height: 1.45;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 1.8px;
+}
+
+.panel p {
+    line-height: 1.85;
+}
+
+/* 自己紹介：写真はここだけに表示 */
+.profile-layout {
+    gap: 28px;
+}
+
+.profile-photo-large img {
+    max-width: 100%;
+}
+
+/* 学習記録・趣味：大きなカード枠をなくす */
+.card-grid {
+    gap: 0 26px;
+}
+
+.info-card {
+    min-height: 0;
+    padding: 18px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(75, 105, 145, 0.17);
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.info-card:hover {
+    transform: none;
+    border-color: rgba(75, 105, 145, 0.3);
+    box-shadow: none;
+}
+
+.info-card h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.card-icon,
+.hobby-icon {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+/* 制作物：囲みを外して、自然な一覧にする */
+.work-list {
+    gap: 0;
+}
+
+.work-card {
+    gap: 18px;
+    padding: 20px 0;
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid rgba(75, 105, 145, 0.17);
+    border-radius: 0;
+    box-shadow: none;
+    transition: none;
+}
+
+.work-card:hover {
+    transform: none;
+    box-shadow: none;
+}
+
+.work-symbol {
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.work-content h3 {
+    font-size: 18px;
+    margin-bottom: 7px;
+}
+
+.work-content p {
+    font-size: 13px;
+    line-height: 1.85;
+}
+
+/* AI・今後の予定の余白を調整 */
+.ai-form {
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.ai-form input {
+    min-width: 0;
+}
+
+.future-line {
+    margin-top: 20px;
+    padding: 15px 10px;
+}
+
+/* 画像・長い文字・フォームのはみ出しを防ぐ */
+img {
+    max-width: 100%;
+}
+
+a,
+p,
+h1,
+h2,
+h3 {
+    overflow-wrap: anywhere;
+}
+
+/* =====================================
+   タブレット
+   ===================================== */
+@media (min-width: 701px) and (max-width: 1050px) {
+    :root {
+        --sidebar-width: 190px;
+        --content-gap: 22px;
+    }
+
+    .sidebar {
+        padding-inline: 11px;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 82px 24px 65px
+            calc(var(--sidebar-width) + var(--content-gap));
+    }
+
+    .hero-top-links {
+        right: 22px;
+    }
+
+    .main-content {
+        padding-top: 22px;
+    }
+
+    .learning-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .hobby-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .profile-layout {
+        grid-template-columns: minmax(130px, 0.7fr) minmax(0, 1.3fr);
+        gap: 20px;
+    }
+}
+
+/* =====================================
+   スマートフォン
+   ===================================== */
+@media (max-width: 700px) {
+    :root {
+        --sidebar-width: 0px;
+        --content-gap: 0px;
+    }
+
+    body {
+        font-size: 13.5px;
+        overflow-x: hidden;
+    }
+
+    .sidebar {
+        inset: 0 0 auto;
+        width: 100%;
+        min-height: 0;
+        padding: 8px 10px 9px;
+    }
+
+    .logo {
+        margin: 0 4px 6px;
+        font-size: 15px;
+    }
+
+    .side-nav {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+        overflow-x: auto;
+        padding: 0 0 3px;
+        scrollbar-width: thin;
+    }
+
+    .nav-link {
+        flex: 0 0 auto;
+        min-height: 34px;
+        padding: 6px 9px;
+        font-size: 11.5px;
+        white-space: nowrap;
+    }
+
+    .hero {
+        min-height: 500px;
+        padding: 140px 20px 55px;
+        background-position: center;
+    }
+
+    .hero-top-links {
+        top: 112px;
+        right: 20px;
+        gap: 13px;
+    }
+
+    .hero-content {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    .hero-text h1 {
+        font-size: clamp(27px, 7.5vw, 34px);
+    }
+
+    .hero-text h2 {
+        font-size: 15px;
+    }
+
+    .intro {
+        font-size: 13px;
+    }
+
+    .main-content {
+        width: 100%;
+        margin: 0;
+        padding: 12px 18px 28px;
+    }
+
+    .panel {
+        margin-bottom: 12px;
+        padding: 20px 0 22px;
+    }
+
+    .panel-heading {
+        gap: 12px;
+        margin-bottom: 16px;
+    }
+
+    .section-title {
+        font-size: 21px;
+    }
+
+    .profile-layout {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .profile-photo-large img {
+        width: 120px;
+        height: 120px;
+        object-fit: cover;
+    }
+
+    .learning-grid,
+    .hobby-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        padding: 16px 0;
+    }
+
+    .work-card {
+        grid-template-columns: 45px minmax(0, 1fr);
+        gap: 12px;
+        padding: 17px 0;
+    }
+
+    .work-symbol {
+        width: 42px;
+        height: 42px;
+        font-size: 18px;
+    }
+
+    .ai-content {
+        grid-template-columns: 45px minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .ai-icon {
+        width: 42px;
+        height: 42px;
+        font-size: 22px;
+    }
+
+    .ai-form {
+        flex-wrap: wrap;
+    }
+
+    .ai-form input {
+        flex-basis: 100%;
+    }
+
+    .ai-form button {
+        max-width: 100%;
+    }
+
+    .future-line {
+        gap: 10px;
+    }
+}
+
+/* 小さいスマートフォン */
+@media (max-width: 380px) {
+    .hero {
+        padding-inline: 16px;
+    }
+
+    .hero-top-links {
+        right: 16px;
+    }
+
+    .main-content {
+        padding-inline: 14px;
+    }
+
+    .panel-heading {
+        gap: 9px;
+    }
+}
+
