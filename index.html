@@ -279,6 +279,22 @@
         window.addEventListener("load", () => {
             document.body.classList.add("page-loaded");
         });
+        
+        // スクロールしたら目次の色を切り替える
+        const navbar = document.querySelector(".navbar");
+
+        const updateNavbar = () => {
+            if (!navbar) return;
+
+            navbar.classList.toggle("scrolled", window.scrollY > 30);
+        };
+
+        window.addEventListener("scroll", updateNavbar, {
+            passive: true
+        });
+
+        updateNavbar();
+
 
         // メニューをクリックしたときのシュインッ！演出
         const transition = document.querySelector(".page-transition");
