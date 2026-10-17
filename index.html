@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -21,10 +20,7 @@
       <a class="nav-link" href="#diary">日記</a>
       <a class="nav-link" href="#abc">ABC参加記録</a>
     </nav>
-    <div class="sidebar-bottom">
-      <span>SCROLL TO EXPLORE</span>
-      <a href="#profile" aria-label="下へ移動">↓</a>
-    </div>
+    <div class="sidebar-bottom"><span>SCROLL TO EXPLORE</span><a href="#profile" aria-label="下へ移動">↓</a></div>
   </aside>
 
   <header class="hero" id="top">
@@ -34,65 +30,29 @@
       <a href="https://note.com/lucky_flea3807" target="_blank" rel="noopener noreferrer">note ↗</a>
       <a href="https://atcoder.jp/" target="_blank" rel="noopener noreferrer">AtCoder ↗</a>
     </div>
-
     <div class="hero-content">
       <p class="greeting">MY PORTFOLIO</p>
       <p class="hero-welcome">こんにちは！</p>
       <h1>AtogawaConanです。</h1>
       <h2>Web開発とAtCoderを勉強中の大学生。</h2>
-      <p class="intro">
-        好きなことを楽しみながら、<br>
-        実際にものを作って学んでいきたいです。
-      </p>
+      <p class="intro">好きなことを楽しみながら、<br>実際にものを作って学んでいきたいです。</p>
       <div class="hero-buttons">
         <a class="button button-primary" href="#learning">学習記録を見る ↓</a>
         <a class="button button-outline" href="#works">制作物を見る →</a>
       </div>
     </div>
-
-    <a class="scroll-cue" href="#profile">
-      <span>SCROLL</span>
-      <span class="scroll-line"></span>
-    </a>
+    <a class="scroll-cue" href="#profile"><span>SCROLL</span><span class="scroll-line"></span></a>
   </header>
 
   <main class="main-content">
-
-    <!-- プロフィール -->
     <section class="section profile-section reveal" id="profile">
-      <div class="section-heading">
-        <span class="section-number">01</span>
-        <div>
-          <p class="eyebrow">ABOUT ME</p>
-          <h2>プロフィール</h2>
-        </div>
-      </div>
-
+      <div class="section-heading"><span class="section-number">01</span><div><p class="eyebrow">ABOUT ME</p><h2>プロフィール</h2></div></div>
       <div class="profile-layout">
-        <div class="profile-photo">
-          <img src="profile.png" alt="プロフィール写真"
-            onerror="this.parentElement.classList.add('image-missing'); this.style.display='none'">
-          <span class="photo-fallback">PROFILE</span>
-        </div>
-
+        <div class="profile-photo"><img src="profile.png" alt="プロフィール写真" onerror="this.parentElement.classList.add('image-missing'); this.style.display='none'"><span class="photo-fallback">PROFILE</span></div>
         <div class="profile-content">
           <h3>AtogawaConan</h3>
-          <p>
-            都会の大学に通う理学部の1年生です。<br>
-            まだ、専攻科目は決まってなくて２年生になってから考えます。<br>
-            プログラミング、AI、ゲーム、サイクリング、料理、アニメ、会話など、いろいろなことに興味があります。<br>
-            現在は、AIを活用したWebサービスを作りたいです。
-          </p>
-
-          <div class="tags">
-            <span>大学生</span>
-            <span>C++</span>
-            <span>AtCoder</span>
-            <span>AI</span>
-            <span>サイクリング</span>
-            <span>ゲーム・アニメ・料理</span>
-          </div>
-
+          <p>都会の大学に通う理学部の1年生です。<br>まだ、専攻科目は決まってなくて２年生になってから考えます。<br>プログラミング、AI、ゲーム、サイクリング、料理、アニメ、会話など、いろいろなことに興味があります。<br>現在は、AIを活用したWebサービスを作りたいです。</p>
+          <div class="tags"><span>大学生</span><span>C++</span><span>AtCoder</span><span>AI</span><span>サイクリング</span><span>ゲーム・アニメ・料理</span></div>
           <div class="social-links">
             <a href="https://x.com/AtogawaConan000" target="_blank" rel="noopener noreferrer">X <span>↗</span></a>
             <a href="https://qiita.com/AtogawaConan" target="_blank" rel="noopener noreferrer">Qiita <span>↗</span></a>
@@ -103,346 +63,110 @@
       </div>
     </section>
 
-    <!-- 学習記録 -->
     <section class="section reveal" id="learning">
-      <div class="section-heading">
-        <span class="section-number">02</span>
-        <div>
-          <p class="eyebrow">LEARNING LOG</p>
-          <h2>学習記録</h2>
-        </div>
-      </div>
-
+      <div class="section-heading"><span class="section-number">02</span><div><p class="eyebrow">LEARNING LOG</p><h2>学習記録</h2></div></div>
       <p class="section-lead">学んだことや、考えたことを少しずつ記録していきます。</p>
-
       <div class="learning-switch" role="tablist" aria-label="学習分野">
         <button class="switch-button active" data-learning-tab="competitive" role="tab" aria-selected="true">競プロ</button>
         <button class="switch-button" data-learning-tab="academic" role="tab" aria-selected="false">学問</button>
       </div>
-
       <div class="learning-panel" id="competitive-panel">
-        <div class="subheading-row">
-          <h3>競技プログラミング</h3>
-          <p>教材・問題ごとに記録を整理</p>
-        </div>
-
+        <div class="subheading-row"><h3>競技プログラミング</h3><p>教材・問題ごとに記録を整理</p></div>
         <div class="resource-grid">
-          <button class="resource-button active" data-resource="鉄則本">
-            <span>01</span><strong>鉄則本</strong><small>アルゴリズムとデータ構造</small>
-          </button>
-          <button class="resource-button" data-resource="典型90">
-            <span>02</span><strong>典型90</strong><small>典型問題を身につける</small>
-          </button>
-          <button class="resource-button" data-resource="過去問精進">
-            <span>03</span><strong>過去問精進</strong><small>コンテスト問題の復習</small>
-          </button>
+          <button class="resource-button active" data-resource="鉄則本"><span>01</span><strong>鉄則本</strong><small>アルゴリズムとデータ構造</small></button>
+          <button class="resource-button" data-resource="典型90"><span>02</span><strong>典型90</strong><small>典型問題を身につける</small></button>
+          <button class="resource-button" data-resource="過去問精進"><span>03</span><strong>過去問精進</strong><small>コンテスト問題の復習</small></button>
         </div>
-
         <div class="record-workspace">
-          <div class="record-list-column">
-            <div class="subheading-row compact">
-              <h4 id="resource-title">鉄則本</h4>
-              <button class="small-button" id="add-problem">＋ 問題を追加</button>
-            </div>
-            <div id="problem-list" class="problem-list">
-              <p class="empty-state">問題はまだ登録されていません。<br>「問題を追加」から自分の学習項目を登録できます。</p>
-            </div>
-          </div>
-
+          <div class="record-list-column"><div class="subheading-row compact"><h4 id="resource-title">鉄則本</h4><button class="small-button" id="add-problem">＋ 問題を追加</button></div><div id="problem-list" class="problem-list"><p class="empty-state">問題はまだ登録されていません。<br>「問題を追加」から自分の学習項目を登録できます。</p></div></div>
           <form id="problem-form" class="editor-form hidden">
             <h4>問題・学習項目を登録</h4>
-            <label>問題名・単元名
-              <input name="title" required placeholder="例：A - Frog 1">
-            </label>
-            <label>問題文のURL
-              <input name="url" type="url" placeholder="https://...">
-            </label>
-            <div class="form-actions">
-              <button type="submit" class="button button-primary">登録</button>
-              <button type="button" class="button button-muted" id="cancel-problem">キャンセル</button>
-            </div>
+            <label>問題名・単元名<input name="title" required placeholder="例：A - Frog 1"></label>
+            <label>問題文のURL<input name="url" type="url" placeholder="https://..."></label>
+            <div class="form-actions"><button type="submit" class="button button-primary">登録</button><button type="button" class="button button-muted" id="cancel-problem">キャンセル</button></div>
           </form>
-
           <form id="study-editor" class="study-editor hidden">
-            <div class="editor-title-row">
-              <div>
-                <p class="eyebrow">STUDY NOTE</p>
-                <h4 id="study-title">学習記録</h4>
-              </div>
-              <button type="button" class="text-button" id="delete-study">この項目を削除</button>
-            </div>
-
-            <label>取り組み状況
-              <select id="study-status">
-                <option>未着手</option>
-                <option>学習中</option>
-                <option>解けた</option>
-                <option>復習したい</option>
-              </select>
-            </label>
-            <label>問題文リンク
-              <input id="study-url" type="url" placeholder="https://...">
-            </label>
-            <label>自分のコード
-              <textarea id="study-code" rows="5" placeholder="自分で書いたコードを貼り付け"></textarea>
-            </label>
-            <label>参考コード
-              <textarea id="study-reference" rows="5" placeholder="解説・参考にしたコード"></textarea>
-            </label>
-            <label>考え方・解法に至るまで
-              <textarea id="study-thinking" rows="3" placeholder="最初に何を考えたか、どこで詰まったか"></textarea>
-            </label>
-            <label>学んだこと・重要ポイント
-              <textarea id="study-learning" rows="3" placeholder="なぜこの解法でよいか、計算量、使った知識など"></textarea>
-            </label>
-            <label>次回の復習メモ
-              <textarea id="study-review" rows="2" placeholder="次に解くときに確認したいこと"></textarea>
-            </label>
-            <button class="button button-primary" type="submit">学習記録を保存</button>
-            <p class="save-note" id="study-save-note" aria-live="polite"></p>
+            <div class="editor-title-row"><div><p class="eyebrow">STUDY NOTE</p><h4 id="study-title">学習記録</h4></div><button type="button" class="text-button" id="delete-study">この項目を削除</button></div>
+            <label>取り組み状況<select id="study-status"><option>未着手</option><option>学習中</option><option>解けた</option><option>復習したい</option></select></label>
+            <label>問題文リンク<input id="study-url" type="url" placeholder="https://..."></label>
+            <label>自分のコード<textarea id="study-code" rows="5" placeholder="自分で書いたコードを貼り付け"></textarea></label>
+            <label>参考コード<textarea id="study-reference" rows="5" placeholder="解説・参考にしたコード"></textarea></label>
+            <label>考え方・解法に至るまで<textarea id="study-thinking" rows="3" placeholder="最初に何を考えたか、どこで詰まったか"></textarea></label>
+            <label>学んだこと・重要ポイント<textarea id="study-learning" rows="3" placeholder="なぜこの解法でよいか、計算量、使った知識など"></textarea></label>
+            <label>次回の復習メモ<textarea id="study-review" rows="2" placeholder="次に解くときに確認したいこと"></textarea></label>
+            <button class="button button-primary" type="submit">学習記録を保存</button><p class="save-note" id="study-save-note" aria-live="polite"></p>
           </form>
         </div>
       </div>
-
       <div class="learning-panel hidden" id="academic-panel">
-        <div class="subheading-row">
-          <h3>大学の学問</h3>
-          <p>授業・単元・自分のノートを整理</p>
-        </div>
-
-        <form id="subject-form" class="inline-add">
-          <input name="subject" required placeholder="科目・単元名を追加（例：微分積分）">
-          <button class="small-button" type="submit">＋ 追加</button>
-        </form>
-
-        <div id="subject-list" class="subject-list">
-          <p class="empty-state">科目や単元はまだ登録されていません。</p>
-        </div>
-
+        <div class="subheading-row"><h3>大学の学問</h3><p>授業・単元・自分のノートを整理</p></div>
+        <form id="subject-form" class="inline-add"><input name="subject" required placeholder="科目・単元名を追加（例：微分積分）"><button class="small-button" type="submit">＋ 追加</button></form>
+        <div id="subject-list" class="subject-list"><p class="empty-state">科目や単元はまだ登録されていません。</p></div>
         <form id="subject-editor" class="study-editor hidden">
-          <div class="editor-title-row">
-            <h4 id="subject-editor-title">授業ノート</h4>
-            <button type="button" class="text-button" id="delete-subject">この単元を削除</button>
-          </div>
-          <label>重要ポイント
-            <textarea id="subject-points" rows="4" placeholder="授業で重要だったこと"></textarea>
-          </label>
-          <label>自分のノート・理解した内容
-            <textarea id="subject-notes" rows="6" placeholder="自分の言葉でまとめる"></textarea>
-          </label>
-          <label>疑問点・あとで調べること
-            <textarea id="subject-questions" rows="3" placeholder="まだ理解できていないこと"></textarea>
-          </label>
-          <label>例題・練習問題
-            <textarea id="subject-examples" rows="3" placeholder="例題や解き方のメモ"></textarea>
-          </label>
-          <button class="button button-primary" type="submit">ノートを保存</button>
-          <p class="save-note" id="subject-save-note" aria-live="polite"></p>
+          <div class="editor-title-row"><h4 id="subject-editor-title">授業ノート</h4><button type="button" class="text-button" id="delete-subject">この単元を削除</button></div>
+          <label>重要ポイント<textarea id="subject-points" rows="4" placeholder="授業で重要だったこと"></textarea></label>
+          <label>自分のノート・理解した内容<textarea id="subject-notes" rows="6" placeholder="自分の言葉でまとめる"></textarea></label>
+          <label>疑問点・あとで調べること<textarea id="subject-questions" rows="3" placeholder="まだ理解できていないこと"></textarea></label>
+          <label>例題・練習問題<textarea id="subject-examples" rows="3" placeholder="例題や解き方のメモ"></textarea></label>
+          <button class="button button-primary" type="submit">ノートを保存</button><p class="save-note" id="subject-save-note" aria-live="polite"></p>
         </form>
       </div>
-
       <p class="storage-note">※ この段階の記録は、保存したブラウザ内に保存されます。別の端末や他の閲覧者とは共有されません。</p>
     </section>
 
-    <!-- 制作物 -->
     <section class="section reveal" id="works">
-      <div class="section-heading">
-        <span class="section-number">03</span>
-        <div>
-          <p class="eyebrow">MY WORKS</p>
-          <h2>制作物</h2>
-        </div>
-      </div>
+      <div class="section-heading"><span class="section-number">03</span><div><p class="eyebrow">MY WORKS</p><h2>制作物</h2></div></div>
       <p class="section-lead">これから作ったものを、ここに追加していきます。</p>
-      <div class="works-empty">
-        <span class="empty-mark">＋</span>
-        <p>制作物はまだありません。</p>
-        <small>作ったWebサイトやアプリを、完成したものから紹介していく予定です。</small>
-      </div>
+      <div class="works-empty"><span class="empty-mark">＋</span><p>制作物はまだありません。</p><small>作ったWebサイトやアプリを、完成したものから紹介していく予定です。</small></div>
     </section>
+        
 
-    <!-- 日記 -->
     <section class="section reveal" id="diary">
-      <div class="section-heading">
-        <span class="section-number">04</span>
-        <div>
-          <p class="eyebrow">DAILY NOTES</p>
-          <h2>日記</h2>
-        </div>
-      </div>
-
+      <div class="section-heading"><span class="section-number">04</span><div><p class="eyebrow">DAILY NOTES</p><h2>日記</h2></div></div>
       <p class="section-lead">日々の出来事や、ちょっとした気づきを記録します。</p>
-
-      <div class="section-tools">
-        <button class="small-button" id="new-diary">＋ 日記を書く</button>
-        <label class="date-tool">日付を選択
-          <input type="date" id="diary-date-picker" aria-label="日付を選択">
-        </label>
-      </div>
-
-      <div id="diary-featured" class="diary-list">
-        <p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p>
-      </div>
-
-      <div class="list-footer">
-        <button class="text-button" id="show-all-diary">⇒ すべての日記を見る</button>
-        <div class="pagination hidden" id="diary-pagination">
-          <button class="small-button" data-page-prev="diary">← 前へ</button>
-          <span id="diary-page-label">1 / 1</span>
-          <button class="small-button" data-page-next="diary">次へ →</button>
-        </div>
-      </div>
-
+      <div class="section-tools"><button class="small-button" id="new-diary">＋ 日記を書く</button><label class="date-tool">日付を選択 <input type="date" id="diary-date-picker" aria-label="日付を選択"></label></div>
+      <div id="diary-featured" class="diary-list"><p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p></div>
+      <div class="list-footer"><button class="text-button" id="show-all-diary">⇒ すべての日記を見る</button><div class="pagination hidden" id="diary-pagination"><button class="small-button" data-page-prev="diary">← 前へ</button><span id="diary-page-label">1 / 1</span><button class="small-button" data-page-next="diary">次へ →</button></div></div>
       <form id="diary-form" class="entry-form hidden">
-        <div class="editor-title-row">
-          <h3 id="diary-form-heading">日記を書く</h3>
-          <button type="button" class="text-button" id="cancel-diary">閉じる</button>
-        </div>
-        <label>タイトル
-          <input name="title" required maxlength="100" placeholder="日記のタイトル">
-        </label>
-        <label>日付
-          <input name="date" type="date" required>
-        </label>
-        <label>ひとこと・本文
-          <textarea name="body" rows="5" required placeholder="今日あったこと、思ったことなど"></textarea>
-        </label>
-        <label>写真（任意）
-          <input name="image" type="url" placeholder="画像URL（任意）">
-        </label>
-        <div class="form-actions">
-          <button type="submit" class="button button-primary">保存する</button>
-          <button type="button" class="button button-muted" id="delete-diary">削除</button>
-        </div>
+        <div class="editor-title-row"><h3 id="diary-form-heading">日記を書く</h3><button type="button" class="text-button" id="cancel-diary">閉じる</button></div>
+        <label>タイトル<input name="title" required maxlength="100" placeholder="日記のタイトル"></label>
+        <label>日付<input name="date" type="date" required></label>
+        <label>ひとこと・本文<textarea name="body" rows="5" required placeholder="今日あったこと、思ったことなど"></textarea></label>
+        <label>写真URL（任意）<input name="image" type="url" placeholder="画像URLを貼り付け"></label>
+        <label>または写真ファイルを選択<input name="imageFile" type="file" accept="image/*"><small class="field-help">画像ファイルは1MB以下を推奨します。選んだ写真はこのブラウザ内に保存されます。</small></label>
+        <div class="form-actions"><button type="submit" class="button button-primary">保存する</button><button type="button" class="button button-muted" id="delete-diary">削除</button></div>
       </form>
-
-      <article id="diary-detail" class="entry-detail hidden">
-        <div class="detail-top">
-          <button class="text-button" id="back-to-diaries">← 一覧に戻る</button>
-          <span id="diary-detail-date"></span>
-        </div>
-        <h3 id="diary-detail-title"></h3>
-        <img id="diary-detail-image" class="detail-image hidden" alt="日記の写真">
-        <p id="diary-detail-body" class="detail-body"></p>
-        <div class="detail-navigation">
-          <button class="small-button" id="diary-prev">← 前の日記</button>
-          <button class="small-button" id="edit-diary">編集する</button>
-          <button class="small-button" id="diary-next">次の日記 →</button>
-        </div>
-      </article>
+      <article id="diary-detail" class="entry-detail hidden"><div class="detail-top"><button class="text-button" id="back-to-diaries">← 一覧に戻る</button><span id="diary-detail-date"></span></div><h3 id="diary-detail-title"></h3><img id="diary-detail-image" class="detail-image hidden" alt="日記の写真"><p id="diary-detail-body" class="detail-body"></p><div class="detail-navigation"><button class="small-button" id="diary-prev">← 前の日記</button><button class="small-button" id="edit-diary">編集する</button><button class="small-button" id="diary-next">次の日記 →</button></div></article>
     </section>
 
-    <!-- ABC参加記録 -->
     <section class="section reveal" id="abc">
-      <div class="section-heading">
-        <span class="section-number">05</span>
-        <div>
-          <p class="eyebrow">ATCODER CONTEST LOG</p>
-          <h2>ABC参加記録</h2>
-        </div>
-      </div>
-
+      <div class="section-heading"><span class="section-number">05</span><div><p class="eyebrow">ATCODER CONTEST LOG</p><h2>ABC参加記録</h2></div></div>
       <p class="section-lead">コンテストの結果、反省、次に向けての目標を記録します。</p>
-
-      <div class="section-tools">
-        <span class="new-label">NEW</span>
-        <button class="small-button" id="new-abc">＋ 参加記録を書く</button>
-      </div>
-
-      <div id="abc-featured" class="abc-strip">
-        <p class="empty-state">ABC参加記録はまだありません。</p>
-      </div>
-
-      <div class="list-footer">
-        <button class="text-button" id="show-all-abc">⇒ すべてを見る</button>
-        <div class="pagination hidden" id="abc-pagination">
-          <button class="small-button" data-page-prev="abc">← 前へ</button>
-          <span id="abc-page-label">1 / 1</span>
-          <button class="small-button" data-page-next="abc">次へ →</button>
-        </div>
-      </div>
-
+      <div class="section-tools"><span class="new-label">NEW</span><button class="small-button" id="new-abc">＋ 参加記録を書く</button></div>
+      <div id="abc-featured" class="abc-strip"><p class="empty-state">ABC参加記録はまだありません。</p></div>
+      <div class="list-footer"><button class="text-button" id="show-all-abc">⇒ すべてを見る</button><div class="pagination hidden" id="abc-pagination"><button class="small-button" data-page-prev="abc">← 前へ</button><span id="abc-page-label">1 / 1</span><button class="small-button" data-page-next="abc">次へ →</button></div></div>
       <form id="abc-form" class="entry-form hidden">
-        <div class="editor-title-row">
-          <h3 id="abc-form-heading">ABC参加記録を書く</h3>
-          <button type="button" class="text-button" id="cancel-abc">閉じる</button>
-        </div>
-        <label>コンテスト名
-          <input name="title" required placeholder="例：AtCoder Beginner Contest XXX">
-        </label>
-        <label>参加日
-          <input name="date" type="date" required>
-        </label>
-        <div class="form-row">
-          <label>解けた問題数
-            <input name="solved" type="number" min="0" max="10" placeholder="例：3">
-          </label>
-          <label>パフォーマンス・レートなど
-            <input name="result" placeholder="例：パフォーマンス、レート">
-          </label>
-        </div>
-        <label>できたこと・結果
-          <textarea name="good" rows="3" placeholder="解けた問題、よかった点など"></textarea>
-        </label>
-        <label>反省・詰まったところ
-          <textarea name="reflection" rows="3" placeholder="原因や次に改善したいこと"></textarea>
-        </label>
-        <label>次回の目標
-          <textarea name="goal" rows="2" placeholder="次のコンテストで意識すること"></textarea>
-        </label>
-        <div class="form-actions">
-          <button type="submit" class="button button-primary">保存する</button>
-          <button type="button" class="button button-muted" id="delete-abc">削除</button>
-        </div>
+        <div class="editor-title-row"><h3 id="abc-form-heading">ABC参加記録を書く</h3><button type="button" class="text-button" id="cancel-abc">閉じる</button></div>
+        <label>コンテスト名<input name="title" required placeholder="例：AtCoder Beginner Contest XXX"></label>
+        <label>参加日<input name="date" type="date" required></label>
+        <div class="form-row"><label>解けた問題数<input name="solved" type="number" min="0" max="10" placeholder="例：3"></label><label>パフォーマンス・レートなど<input name="result" placeholder="例：パフォーマンス、レート"></label></div>
+        <label>できたこと・結果<textarea name="good" rows="3" placeholder="解けた問題、よかった点など"></textarea></label>
+        <label>反省・詰まったところ<textarea name="reflection" rows="3" placeholder="原因や次に改善したいこと"></textarea></label>
+        <label>次回の目標<textarea name="goal" rows="2" placeholder="次のコンテストで意識すること"></textarea></label>
+        <div class="form-actions"><button type="submit" class="button button-primary">保存する</button><button type="button" class="button button-muted" id="delete-abc">削除</button></div>
       </form>
-
-      <article id="abc-detail" class="entry-detail hidden">
-        <div class="detail-top">
-          <button class="text-button" id="back-to-abc">← 一覧に戻る</button>
-          <span id="abc-detail-date"></span>
-        </div>
-        <h3 id="abc-detail-title"></h3>
-        <p id="abc-detail-result" class="result-line"></p>
-        <div class="detail-section">
-          <h4>できたこと・結果</h4>
-          <p id="abc-detail-good"></p>
-        </div>
-        <div class="detail-section">
-          <h4>反省・詰まったところ</h4>
-          <p id="abc-detail-reflection"></p>
-        </div>
-        <div class="detail-section">
-          <h4>次回の目標</h4>
-          <p id="abc-detail-goal"></p>
-        </div>
-        <div class="detail-navigation">
-          <button class="small-button" id="abc-prev">← 前の記録</button>
-          <button class="small-button" id="edit-abc">編集する</button>
-          <button class="small-button" id="abc-next">次の記録 →</button>
-        </div>
-      </article>
+      <article id="abc-detail" class="entry-detail hidden"><div class="detail-top"><button class="text-button" id="back-to-abc">← 一覧に戻る</button><span id="abc-detail-date"></span></div><h3 id="abc-detail-title"></h3><p id="abc-detail-result" class="result-line"></p><div class="detail-section"><h4>できたこと・結果</h4><p id="abc-detail-good"></p></div><div class="detail-section"><h4>反省・詰まったところ</h4><p id="abc-detail-reflection"></p></div><div class="detail-section"><h4>次回の目標</h4><p id="abc-detail-goal"></p></div><div class="detail-navigation"><button class="small-button" id="abc-prev">← 前の記録</button><button class="small-button" id="edit-abc">編集する</button><button class="small-button" id="abc-next">次の記録 →</button></div></article>
     </section>
 
-    <!-- アンケート・フッター -->
     <section class="survey-section reveal">
       <h2>ご意見をお聞かせください</h2>
       <p>サイトを見た感想や、改善点を教えていただけるとうれしいです！</p>
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqUwJG3KHhPEpXQrrQN3BghjyvZuZqhPfHjVuIur-XScbzLA/viewform?usp=dialog"
-        target="_blank" rel="noopener noreferrer" class="button button-primary">
-        アンケートにご協力ください ↗
-      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqUwJG3KHhPEpXQrrQN3BghjyvZuZqhPfHjVuIur-XScbzLA/viewform?usp=dialog" target="_blank" rel="noopener noreferrer" class="button button-primary">アンケートにご協力ください ↗</a>
     </section>
-
     <footer class="footer">
       <p class="footer-logo">My Portfolio</p>
-      <div class="footer-links">
-        <a href="https://x.com/AtogawaConan000" target="_blank" rel="noopener noreferrer">X</a>
-        <a href="https://qiita.com/AtogawaConan" target="_blank" rel="noopener noreferrer">Qiita</a>
-        <a href="https://note.com/lucky_flea3807" target="_blank" rel="noopener noreferrer">note</a>
-        <a href="https://atcoder.jp/" target="_blank" rel="noopener noreferrer">AtCoder</a>
-      </div>
-      <p class="copyright">© AtogawaConan</p>
-      <a class="back-to-top" href="#top">↑ ページの先頭へ</a>
+      <div class="footer-links"><a href="https://x.com/AtogawaConan000" target="_blank" rel="noopener noreferrer">X</a><a href="https://qiita.com/AtogawaConan" target="_blank" rel="noopener noreferrer">Qiita</a><a href="https://note.com/lucky_flea3807" target="_blank" rel="noopener noreferrer">note</a><a href="https://atcoder.jp/" target="_blank" rel="noopener noreferrer">AtCoder</a></div>
+      <p class="copyright">© AtogawaConan</p><a class="back-to-top" href="#top">↑ ページの先頭へ</a>
     </footer>
   </main>
 
@@ -451,640 +175,162 @@
     const $$ = (selector) => [...document.querySelectorAll(selector)];
     const STORAGE_KEY = 'atogawaPortfolioData_v1';
     const today = () => new Date().toLocaleDateString('sv-SE');
-    const blankData = () => ({
-      diaries: [],
-      abc: [],
-      problems: { '鉄則本': [], '典型90': [], '過去問精進': [] },
-      subjects: []
-    });
-
+    const blankData = () => ({ diaries: [], abc: [], problems: { '鉄則本': [], '典型90': [], '過去問精進': [] }, subjects: [] });
     let data;
-    try {
-      data = { ...blankData(), ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') };
-    } catch {
-      data = blankData();
-    }
-
+    try { data = { ...blankData(), ...JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}') }; }
+    catch { data = blankData(); }
     data.problems ||= blankData().problems;
-    ['鉄則本', '典型90', '過去問精進'].forEach(k => data.problems[k] ||= []);
-    const persist = () => localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
-
-    const escapeHtml = (value = '') => String(value).replace(/[&<>"']/g, c => ({
-      '&': '&amp;',
-      '<': '&lt;',
-      '>': '&gt;',
-      '"': '&quot;',
-      "'": '&#39;'
-    }[c]));
-
+    ['鉄則本','典型90','過去問精進'].forEach(k => data.problems[k] ||= []);
+    const persist = () => { try { localStorage.setItem(STORAGE_KEY, JSON.stringify(data)); return true; } catch (error) { console.error(error); throw error; } };
+    const escapeHtml = (value='') => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     const dateLabel = d => d ? d.replaceAll('-', '.') : '';
-    const makeId = () => (crypto.randomUUID
-      ? crypto.randomUUID()
-      : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
+    const makeId = () => (crypto.randomUUID ? crypto.randomUUID() : `${Date.now()}-${Math.random().toString(16).slice(2)}`);
 
-    // メニューの現在位置とスクロール演出
+    // Sidebar scroll tracking and subtle reveal animation
     window.addEventListener('load', () => document.body.classList.add('page-loaded'));
-
     const navLinks = $$('.nav-link');
-    const navSections = navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean);
-
+        const navSections = navLinks.map(a => $(a.getAttribute('href'))).filter(Boolean);
     if ('IntersectionObserver' in window) {
       const navObserver = new IntersectionObserver(entries => entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navLinks.forEach(a => a.classList.toggle(
-            'active',
-            a.getAttribute('href') === `#${entry.target.id}`
-          ));
-        }
+        if (entry.isIntersecting) navLinks.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
       }), { rootMargin: '-28% 0px -60% 0px' });
-
       navSections.forEach(section => navObserver.observe(section));
-
-      const revealObserver = new IntersectionObserver((entries, observer) =>
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-          }
-        }),
-        { threshold: .06, rootMargin: '0px 0px -20px 0px' }
-      );
-
+      const revealObserver = new IntersectionObserver((entries, observer) => entries.forEach(entry => {
+        if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+      }), { threshold: .06, rootMargin: '0px 0px -20px 0px' });
       $$('.reveal').forEach(el => revealObserver.observe(el));
-    } else {
-      $$('.reveal').forEach(el => el.classList.add('visible'));
-    }
+    } else $$('.reveal').forEach(el => el.classList.add('visible'));
 
-    // 学習タブ
+    // Study tabs
     let currentResource = '鉄則本';
     let currentProblemId = null;
     let currentSubjectId = null;
-
     $$('[data-learning-tab]').forEach(button => button.addEventListener('click', () => {
-      $$('[data-learning-tab]').forEach(b => {
-        b.classList.toggle('active', b === button);
-        b.setAttribute('aria-selected', String(b === button));
-      });
-
-      $('#competitive-panel').classList.toggle(
-        'hidden',
-        button.dataset.learningTab !== 'competitive'
-      );
-      $('#academic-panel').classList.toggle(
-        'hidden',
-        button.dataset.learningTab !== 'academic'
-      );
+      $$('[data-learning-tab]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-selected', String(b === button)); });
+      $('#competitive-panel').classList.toggle('hidden', button.dataset.learningTab !== 'competitive');
+      $('#academic-panel').classList.toggle('hidden', button.dataset.learningTab !== 'academic');
     }));
-
     $$('[data-resource]').forEach(button => button.addEventListener('click', () => {
       currentResource = button.dataset.resource;
       $$('[data-resource]').forEach(b => b.classList.toggle('active', b === button));
       $('#resource-title').textContent = currentResource;
-      currentProblemId = null;
-      $('#study-editor').classList.add('hidden');
-      renderProblems();
+      currentProblemId = null; $('#study-editor').classList.add('hidden'); renderProblems();
     }));
-
     function renderProblems() {
-      const list = $('#problem-list');
-      const items = data.problems[currentResource] || [];
-
-      list.innerHTML = items.length
-        ? items.map(p => `
-          <button class="problem-item" data-problem-id="${escapeHtml(p.id)}">
-            <span>
-              <strong>${escapeHtml(p.title)}</strong>
-              <small>${escapeHtml(p.status || '未着手')}</small>
-            </span>
-            <span>→</span>
-          </button>
-        `).join('')
-        : '<p class="empty-state">問題はまだ登録されていません。<br>「問題を追加」から自分の学習項目を登録できます。</p>';
-
-      $$('[data-problem-id]').forEach(b =>
-        b.addEventListener('click', () => openProblem(b.dataset.problemId))
-      );
+      const list = $('#problem-list'); const items = data.problems[currentResource] || [];
+      list.innerHTML = items.length ? items.map(p => `<button class="problem-item" data-problem-id="${escapeHtml(p.id)}"><span><strong>${escapeHtml(p.title)}</strong><small>${escapeHtml(p.status || '未着手')}</small></span><span>→</span></button>`).join('') : '<p class="empty-state">問題はまだ登録されていません。<br>「問題を追加」から自分の学習項目を登録できます。</p>';
+      $$('[data-problem-id]').forEach(b => b.addEventListener('click', () => openProblem(b.dataset.problemId)));
     }
-
-    $('#add-problem').addEventListener('click', () => {
-      $('#problem-form').classList.remove('hidden');
-      $('#problem-form').elements.title.focus();
-    });
-
-    $('#cancel-problem').addEventListener('click', () =>
-      $('#problem-form').classList.add('hidden')
-    );
-
+    $('#add-problem').addEventListener('click', () => { $('#problem-form').classList.remove('hidden'); $('#problem-form').elements.title.focus(); });
+    $('#cancel-problem').addEventListener('click', () => $('#problem-form').classList.add('hidden'));
     $('#problem-form').addEventListener('submit', e => {
-      e.preventDefault();
-      const f = new FormData(e.currentTarget);
-
-      const p = {
-        id: makeId(),
-        title: f.get('title').trim(),
-        url: f.get('url').trim(),
-        status: '未着手',
-        code: '',
-        reference: '',
-        thinking: '',
-        learning: '',
-        review: ''
-      };
-
-      data.problems[currentResource].push(p);
-      persist();
-      e.currentTarget.reset();
-      e.currentTarget.classList.add('hidden');
-      renderProblems();
-      openProblem(p.id);
+      e.preventDefault(); const f = new FormData(e.currentTarget);
+      const p = { id: makeId(), title: f.get('title').trim(), url: f.get('url').trim(), status: '未着手', code: '', reference: '', thinking: '', learning: '', review: '' };
+      data.problems[currentResource].push(p); persist(); e.currentTarget.reset(); e.currentTarget.classList.add('hidden'); renderProblems(); openProblem(p.id);
     });
-
     function openProblem(id) {
-      const p = (data.problems[currentResource] || []).find(x => x.id === id);
-      if (!p) return;
-
-      currentProblemId = id;
-      $('#study-editor').classList.remove('hidden');
-      $('#study-title').textContent = p.title;
-      $('#study-status').value = p.status || '未着手';
-      $('#study-url').value = p.url || '';
-      $('#study-code').value = p.code || '';
-      $('#study-reference').value = p.reference || '';
-      $('#study-thinking').value = p.thinking || '';
-      $('#study-learning').value = p.learning || '';
-      $('#study-review').value = p.review || '';
-      $('#study-save-note').textContent = '';
-
+      const p = (data.problems[currentResource] || []).find(x => x.id === id); if (!p) return;
+      currentProblemId = id; $('#study-editor').classList.remove('hidden'); $('#study-title').textContent = p.title;
+      $('#study-status').value = p.status || '未着手'; $('#study-url').value = p.url || ''; $('#study-code').value = p.code || ''; $('#study-reference').value = p.reference || ''; $('#study-thinking').value = p.thinking || ''; $('#study-learning').value = p.learning || ''; $('#study-review').value = p.review || ''; $('#study-save-note').textContent = '';
       $('#study-editor').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
     }
-
     $('#study-editor').addEventListener('submit', e => {
-      e.preventDefault();
-      const p = (data.problems[currentResource] || []).find(x => x.id === currentProblemId);
-      if (!p) return;
-
-      Object.assign(p, {
-        status: $('#study-status').value,
-        url: $('#study-url').value.trim(),
-        code: $('#study-code').value,
-        reference: $('#study-reference').value,
-        thinking: $('#study-thinking').value,
-        learning: $('#study-learning').value,
-        review: $('#study-review').value
-      });
-
-      persist();
-      renderProblems();
-      $('#study-save-note').textContent = 'このブラウザに保存しました。';
+      e.preventDefault(); const p = (data.problems[currentResource] || []).find(x => x.id === currentProblemId); if (!p) return;
+      Object.assign(p, { status: $('#study-status').value, url: $('#study-url').value.trim(), code: $('#study-code').value, reference: $('#study-reference').value, thinking: $('#study-thinking').value, learning: $('#study-learning').value, review: $('#study-review').value });
+      persist(); renderProblems(); $('#study-save-note').textContent = 'このブラウザに保存しました。';
     });
+    $('#delete-study').addEventListener('click', () => { if (!currentProblemId || !confirm('この問題と学習記録を削除しますか？')) return; data.problems[currentResource] = data.problems[currentResource].filter(p => p.id !== currentProblemId); currentProblemId = null; persist(); renderProblems(); $('#study-editor').classList.add('hidden'); });
 
-    $('#delete-study').addEventListener('click', () => {
-      if (!currentProblemId || !confirm('この問題と学習記録を削除しますか？')) return;
-
-      data.problems[currentResource] =
-        data.problems[currentResource].filter(p => p.id !== currentProblemId);
-
-      currentProblemId = null;
-      persist();
-      renderProblems();
-      $('#study-editor').classList.add('hidden');
-    });
-
-    // 大学の科目・単元
+    // University subjects
     function renderSubjects() {
-      $('#subject-list').innerHTML = data.subjects.length
-        ? data.subjects.map(s => `
-          <button class="problem-item" data-subject-id="${escapeHtml(s.id)}">
-            <span>
-              <strong>${escapeHtml(s.title)}</strong>
-              <small>授業ノート</small>
-            </span>
-            <span>→</span>
-          </button>
-        `).join('')
-        : '<p class="empty-state">科目や単元はまだ登録されていません。</p>';
-
-      $$('[data-subject-id]').forEach(b =>
-        b.addEventListener('click', () => openSubject(b.dataset.subjectId))
-      );
+      $('#subject-list').innerHTML = data.subjects.length ? data.subjects.map(s => `<button class="problem-item" data-subject-id="${escapeHtml(s.id)}"><span><strong>${escapeHtml(s.title)}</strong><small>授業ノート</small></span><span>→</span></button>`).join('') : '<p class="empty-state">科目や単元はまだ登録されていません。</p>';
+      $$('[data-subject-id]').forEach(b => b.addEventListener('click', () => openSubject(b.dataset.subjectId)));
     }
+    $('#subject-form').addEventListener('submit', e => { e.preventDefault(); const title = new FormData(e.currentTarget).get('subject').trim(); if (!title) return; const s = { id: makeId(), title, points: '', notes: '', questions: '', examples: '' }; data.subjects.push(s); persist(); e.currentTarget.reset(); renderSubjects(); openSubject(s.id); });
+    function openSubject(id) { const s = data.subjects.find(x => x.id === id); if (!s) return; currentSubjectId = id; $('#subject-editor').classList.remove('hidden'); $('#subject-editor-title').textContent = s.title; $('#subject-points').value = s.points || ''; $('#subject-notes').value = s.notes || ''; $('#subject-questions').value = s.questions || ''; $('#subject-examples').value = s.examples || ''; $('#subject-save-note').textContent = ''; }
+    $('#subject-editor').addEventListener('submit', e => { e.preventDefault(); const s = data.subjects.find(x => x.id === currentSubjectId); if (!s) return; Object.assign(s, { points: $('#subject-points').value, notes: $('#subject-notes').value, questions: $('#subject-questions').value, examples: $('#subject-examples').value }); persist(); $('#subject-save-note').textContent = 'このブラウザに保存しました。'; });
+    $('#delete-subject').addEventListener('click', () => { if (!currentSubjectId || !confirm('この単元を削除しますか？')) return; data.subjects = data.subjects.filter(s => s.id !== currentSubjectId); currentSubjectId = null; persist(); renderSubjects(); $('#subject-editor').classList.add('hidden'); });
 
-    $('#subject-form').addEventListener('submit', e => {
-      e.preventDefault();
-      const title = new FormData(e.currentTarget).get('subject').trim();
-      if (!title) return;
-
-      const s = {
-        id: makeId(),
-        title,
-        points: '',
-        notes: '',
-        questions: '',
-        examples: ''
-      };
-
-      data.subjects.push(s);
-      persist();
-      e.currentTarget.reset();
-      renderSubjects();
-      openSubject(s.id);
-    });
-
-    function openSubject(id) {
-      const s = data.subjects.find(x => x.id === id);
-      if (!s) return;
-
-      currentSubjectId = id;
-      $('#subject-editor').classList.remove('hidden');
-      $('#subject-editor-title').textContent = s.title;
-      $('#subject-points').value = s.points || '';
-      $('#subject-notes').value = s.notes || '';
-      $('#subject-questions').value = s.questions || '';
-      $('#subject-examples').value = s.examples || '';
-      $('#subject-save-note').textContent = '';
-    }
-
-    $('#subject-editor').addEventListener('submit', e => {
-      e.preventDefault();
-      const s = data.subjects.find(x => x.id === currentSubjectId);
-      if (!s) return;
-
-      Object.assign(s, {
-        points: $('#subject-points').value,
-        notes: $('#subject-notes').value,
-        questions: $('#subject-questions').value,
-        examples: $('#subject-examples').value
-      });
-
-      persist();
-      $('#subject-save-note').textContent = 'このブラウザに保存しました。';
-    });
-
-    $('#delete-subject').addEventListener('click', () => {
-      if (!currentSubjectId || !confirm('この単元を削除しますか？')) return;
-
-      data.subjects = data.subjects.filter(s => s.id !== currentSubjectId);
-      currentSubjectId = null;
-      persist();
-      renderSubjects();
-      $('#subject-editor').classList.add('hidden');
-    });
-
-    // 日記：最新5件・全件表示・20件ごとのページ送り
-    let diaryPage = 1;
-    let diaryModeAll = false;
-    let activeDiaryId = null;
-    let editingDiaryId = null;
-
-    const sortedDiaries = () => [...data.diaries].sort((a, b) =>
-      (b.date || '').localeCompare(a.date || '') ||
-      (b.created || 0) - (a.created || 0)
-    );
-
+    // Diary: latest five, all-items list paged by 20, detail and previous/next
+    let diaryPage = 1, diaryModeAll = false, activeDiaryId = null, editingDiaryId = null;
+    const sortedDiaries = () => [...data.diaries].sort((a,b) => (b.date || '').localeCompare(a.date || '') || (b.created || 0) - (a.created || 0));
     function renderDiaries() {
-      const items = sortedDiaries();
-      const shown = diaryModeAll
-        ? items.slice((diaryPage - 1) * 20, diaryPage * 20)
-        : items.slice(0, 5);
-
-      $('#diary-featured').innerHTML = shown.length
-        ? shown.map(d => `
-          <button class="diary-row" data-diary-id="${escapeHtml(d.id)}">
-            <span class="diary-date">${escapeHtml(dateLabel(d.date))}</span>
-            <strong>${escapeHtml(d.title)}</strong>
-            <span class="diary-arrow">→</span>
-          </button>
-        `).join('')
-        : '<p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p>';
-
-      $$('[data-diary-id]').forEach(b =>
-        b.addEventListener('click', () => openDiary(b.dataset.diaryId))
-      );
-
-      const pages = Math.max(1, Math.ceil(items.length / 20));
-      $('#diary-pagination').classList.toggle('hidden', !diaryModeAll);
-      $('#diary-page-label').textContent = `${diaryPage} / ${pages}`;
-
-      $$('[data-page-prev="diary"],[data-page-next="diary"]').forEach(b => {
-        b.disabled = b.hasAttribute('data-page-prev')
-          ? diaryPage <= 1
-          : diaryPage >= pages;
-      });
-
-      $('#show-all-diary').textContent = diaryModeAll
-        ? '⇒ 最新の日記に戻る'
-        : '⇒ すべての日記を見る';
+      const items = sortedDiaries(); const shown = diaryModeAll ? items.slice((diaryPage-1)*20, diaryPage*20) : items.slice(0,5);
+      $('#diary-featured').innerHTML = shown.length ? shown.map(d => `<button class="diary-row" data-diary-id="${escapeHtml(d.id)}"><span class="diary-date">${escapeHtml(dateLabel(d.date))}</span><strong>${escapeHtml(d.title)}</strong><span class="diary-arrow">→</span></button>`).join('') : '<p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p>';
+      $$('[data-diary-id]').forEach(b => b.addEventListener('click', () => openDiary(b.dataset.diaryId)));
+      const pages = Math.max(1, Math.ceil(items.length/20)); $('#diary-pagination').classList.toggle('hidden', !diaryModeAll); $('#diary-page-label').textContent = `${diaryPage} / ${pages}`;
+      $$('[data-page-prev="diary"],[data-page-next="diary"]').forEach(b => b.disabled = b.hasAttribute('data-page-prev') ? diaryPage <= 1 : diaryPage >= pages);
+      $('#show-all-diary').textContent = diaryModeAll ? '⇒ 最新の日記に戻る' : '⇒ すべての日記を見る';
     }
-
-    $('#show-all-diary').addEventListener('click', () => {
-      diaryModeAll = !diaryModeAll;
-      diaryPage = 1;
-      renderDiaries();
-    });
-
-    $$('[data-page-prev="diary"],[data-page-next="diary"]').forEach(b =>
-      b.addEventListener('click', () => {
-        diaryPage += b.hasAttribute('data-page-prev') ? -1 : 1;
-        renderDiaries();
-      })
-    );
-
-    $('#new-diary').addEventListener('click', () => openDiaryForm());
-    $('#cancel-diary').addEventListener('click', () =>
-      $('#diary-form').classList.add('hidden')
-    );
-
-    function openDiaryForm(item = null) {
-      editingDiaryId = item?.id || null;
-      const f = $('#diary-form');
-      f.reset();
-      f.classList.remove('hidden');
-      f.elements.title.value = item?.title || '';
-      f.elements.date.value = item?.date || today();
-      f.elements.body.value = item?.body || '';
-      f.elements.image.value = item?.image || '';
-      $('#diary-form-heading').textContent = item ? '日記を編集' : '日記を書く';
-      $('#delete-diary').classList.toggle('hidden', !item);
-      f.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    $('#diary-form').addEventListener('submit', e => {
+    $('#show-all-diary').addEventListener('click', () => { diaryModeAll = !diaryModeAll; diaryPage = 1; renderDiaries(); });
+    $$('[data-page-prev="diary"],[data-page-next="diary"]').forEach(b => b.addEventListener('click', () => { diaryPage += b.hasAttribute('data-page-prev') ? -1 : 1; renderDiaries(); }));
+    $('#new-diary').addEventListener('click', () => openDiaryForm()); $('#cancel-diary').addEventListener('click', () => $('#diary-form').classList.add('hidden'));
+    function openDiaryForm(item=null) { editingDiaryId = item?.id || null; const f = $('#diary-form'); f.reset(); f.classList.remove('hidden'); f.elements.title.value = item?.title || ''; f.elements.date.value = item?.date || today(); f.elements.body.value = item?.body || ''; f.elements.image.value = item?.image && !item.image.startsWith('data:') ? item.image : ''; f.elements.imageFile.value = ''; $('#diary-form-heading').textContent = item ? '日記を編集' : '日記を書く'; $('#delete-diary').classList.toggle('hidden', !item); f.scrollIntoView({behavior:'smooth',block:'nearest'}); }
+    $('#diary-form').addEventListener('submit', async e => {
       e.preventDefault();
       const f = e.currentTarget;
       const fd = new FormData(f);
-
-      const item = {
-        id: editingDiaryId || makeId(),
-        title: fd.get('title').trim(),
-        date: fd.get('date'),
-        body: fd.get('body').trim(),
-        image: fd.get('image').trim(),
-        created: Date.now()
-      };
-
-      if (editingDiaryId) {
-        data.diaries = data.diaries.map(d =>
-          d.id === editingDiaryId ? { ...d, ...item } : d
-        );
-      } else {
-        data.diaries.push(item);
+      const previous = editingDiaryId ? data.diaries.find(d => d.id === editingDiaryId) : null;
+      const imageUrl = String(fd.get('image') || '').trim();
+      const imageFile = f.elements.imageFile.files[0];
+      let image = imageUrl || previous?.image || '';
+      if (imageFile) {
+        if (imageFile.size > 1024 * 1024) {
+          alert('写真ファイルは1MB以下にしてください。');
+          return;
+        }
+        try {
+          image = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => resolve(String(reader.result));
+            reader.onerror = reject;
+            reader.readAsDataURL(imageFile);
+          });
+        } catch {
+          alert('写真を読み込めませんでした。別の画像を選んでください。');
+          return;
+        }
       }
-
-      persist();
+      const item = { id: editingDiaryId || makeId(), title: fd.get('title').trim(), date: fd.get('date'), body: fd.get('body').trim(), image, created: previous?.created || Date.now() };
+      if (editingDiaryId) data.diaries = data.diaries.map(d => d.id === editingDiaryId ? {...d,...item} : d);
+      else data.diaries.push(item);
+      try { persist(); } catch { alert('保存できませんでした。写真を小さくするか、保存データを減らしてください。'); return; }
       f.classList.add('hidden');
       diaryModeAll = false;
       renderDiaries();
       openDiary(item.id);
     });
+    $('#delete-diary').addEventListener('click', () => { if (!editingDiaryId || !confirm('この日記を削除しますか？')) return; data.diaries = data.diaries.filter(d => d.id !== editingDiaryId); persist(); $('#diary-form').classList.add('hidden'); $('#diary-detail').classList.add('hidden'); $('#diary-featured').classList.remove('hidden'); renderDiaries(); });
+    function openDiary(id) { const d = sortedDiaries().find(x => x.id === id); if (!d) return; activeDiaryId = id; $('#diary-featured').classList.add('hidden'); $('#diary-pagination').classList.add('hidden'); $('#diary-form').classList.add('hidden'); $('#diary-detail').classList.remove('hidden'); $('#diary-detail-date').textContent = dateLabel(d.date); $('#diary-detail-title').textContent = d.title; $('#diary-detail-body').textContent = d.body; const img = $('#diary-detail-image'); if (d.image) { img.src = d.image; img.classList.remove('hidden'); } else { img.removeAttribute('src'); img.classList.add('hidden'); } const all = sortedDiaries(), idx = all.findIndex(x => x.id === id); $('#diary-prev').disabled = idx >= all.length-1; $('#diary-next').disabled = idx <= 0; }
+    function closeDiaryDetail() { $('#diary-detail').classList.add('hidden'); $('#diary-featured').classList.remove('hidden'); renderDiaries(); }
+    $('#back-to-diaries').addEventListener('click', closeDiaryDetail); $('#edit-diary').addEventListener('click', () => openDiaryForm(sortedDiaries().find(d => d.id === activeDiaryId)));
+    $('#diary-prev').addEventListener('click', () => moveDiary(-1)); $('#diary-next').addEventListener('click', () => moveDiary(1));
+    function moveDiary(direction) { const all = sortedDiaries(), idx = all.findIndex(x => x.id === activeDiaryId), next = all[idx-direction]; if (next) openDiary(next.id); }
+    $('#diary-date-picker').addEventListener('change', e => { if (!e.target.value) return; const match = sortedDiaries().find(d => d.date === e.target.value); if (match) openDiary(match.id); else alert('選択した日付の日記はまだありません。'); });
 
-    $('#delete-diary').addEventListener('click', () => {
-      if (!editingDiaryId || !confirm('この日記を削除しますか？')) return;
-
-      data.diaries = data.diaries.filter(d => d.id !== editingDiaryId);
-      persist();
-      $('#diary-form').classList.add('hidden');
-      $('#diary-detail').classList.add('hidden');
-      $('#diary-featured').classList.remove('hidden');
-      renderDiaries();
-    });
-
-    function openDiary(id) {
-      const d = sortedDiaries().find(x => x.id === id);
-      if (!d) return;
-
-      activeDiaryId = id;
-      $('#diary-featured').classList.add('hidden');
-      $('#diary-pagination').classList.add('hidden');
-      $('#diary-form').classList.add('hidden');
-      $('#diary-detail').classList.remove('hidden');
-      $('#diary-detail-date').textContent = dateLabel(d.date);
-      $('#diary-detail-title').textContent = d.title;
-      $('#diary-detail-body').textContent = d.body;
-
-      const img = $('#diary-detail-image');
-      if (d.image) {
-        img.src = d.image;
-        img.classList.remove('hidden');
-      } else {
-        img.removeAttribute('src');
-        img.classList.add('hidden');
-      }
-
-      const all = sortedDiaries();
-      const idx = all.findIndex(x => x.id === id);
-      $('#diary-prev').disabled = idx >= all.length - 1;
-      $('#diary-next').disabled = idx <= 0;
-    }
-
-    function closeDiaryDetail() {
-      $('#diary-detail').classList.add('hidden');
-      $('#diary-featured').classList.remove('hidden');
-      renderDiaries();
-    }
-
-    $('#back-to-diaries').addEventListener('click', closeDiaryDetail);
-    $('#edit-diary').addEventListener('click', () =>
-      openDiaryForm(sortedDiaries().find(d => d.id === activeDiaryId))
-    );
-    $('#diary-prev').addEventListener('click', () => moveDiary(-1));
-    $('#diary-next').addEventListener('click', () => moveDiary(1));
-
-    function moveDiary(direction) {
-      const all = sortedDiaries();
-      const idx = all.findIndex(x => x.id === activeDiaryId);
-      const next = all[idx - direction];
-      if (next) openDiary(next.id);
-    }
-
-    $('#diary-date-picker').addEventListener('change', e => {
-      if (!e.target.value) return;
-      const match = sortedDiaries().find(d => d.date === e.target.value);
-      if (match) openDiary(match.id);
-      else alert('選択した日付の日記はまだありません。');
-    });
-
-    // ABC参加記録
-    let abcPage = 1;
-    let abcModeAll = false;
-    let activeAbcId = null;
-    let editingAbcId = null;
-
-    const sortedAbc = () => [...data.abc].sort((a, b) =>
-      (b.date || '').localeCompare(a.date || '') ||
-      (b.created || 0) - (a.created || 0)
-    );
-
+    // ABC contest reports
+    let abcPage = 1, abcModeAll = false, activeAbcId = null, editingAbcId = null;
+    const sortedAbc = () => [...data.abc].sort((a,b) => (b.date || '').localeCompare(a.date || '') || (b.created || 0) - (a.created || 0));
     function renderAbc() {
-      const items = sortedAbc();
-      const shown = abcModeAll
-        ? items.slice((abcPage - 1) * 20, abcPage * 20)
-        : items.slice(0, 5);
-
-      $('#abc-featured').innerHTML = shown.length
-        ? shown.map(a => `
-          <button class="abc-card" data-abc-id="${escapeHtml(a.id)}">
-            <span class="abc-card-date">${escapeHtml(dateLabel(a.date))}</span>
-            <strong>${escapeHtml(a.title)}</strong>
-            <span class="abc-card-result">${
-              escapeHtml(a.result || (a.solved !== '' && a.solved != null
-                ? `${a.solved}問 AC`
-                : '参加記録'))
-            }</span>
-            <span class="diary-arrow">→</span>
-          </button>
-        `).join('')
-        : '<p class="empty-state">ABC参加記録はまだありません。</p>';
-
-      $$('[data-abc-id]').forEach(b =>
-        b.addEventListener('click', () => openAbc(b.dataset.abcId))
-      );
-
-      const pages = Math.max(1, Math.ceil(items.length / 20));
-      $('#abc-pagination').classList.toggle('hidden', !abcModeAll);
-      $('#abc-page-label').textContent = `${abcPage} / ${pages}`;
-
-      $$('[data-page-prev="abc"],[data-page-next="abc"]').forEach(b => {
-        b.disabled = b.hasAttribute('data-page-prev')
-          ? abcPage <= 1
-          : abcPage >= pages;
-      });
-
-      $('#show-all-abc').textContent = abcModeAll
-        ? '⇒ 最新の記録に戻る'
-        : '⇒ すべてを見る';
+      const items = sortedAbc(); const shown = abcModeAll ? items.slice((abcPage-1)*20, abcPage*20) : items.slice(0,5);
+      $('#abc-featured').innerHTML = shown.length ? shown.map(a => `<button class="abc-card" data-abc-id="${escapeHtml(a.id)}"><span class="abc-card-date">${escapeHtml(dateLabel(a.date))}</span><strong>${escapeHtml(a.title)}</strong><span class="abc-card-result">${escapeHtml(a.result || (a.solved !== '' && a.solved != null ? `${a.solved}問 AC` : '参加記録'))}</span><span class="diary-arrow">→</span></button>`).join('') : '<p class="empty-state">ABC参加記録はまだありません。</p>';
+      $$('[data-abc-id]').forEach(b => b.addEventListener('click', () => openAbc(b.dataset.abcId)));
+      const pages = Math.max(1, Math.ceil(items.length/20)); $('#abc-pagination').classList.toggle('hidden', !abcModeAll); $('#abc-page-label').textContent = `${abcPage} / ${pages}`;
+      $$('[data-page-prev="abc"],[data-page-next="abc"]').forEach(b => b.disabled = b.hasAttribute('data-page-prev') ? abcPage <= 1 : abcPage >= pages);
+      $('#show-all-abc').textContent = abcModeAll ? '⇒ 最新の記録に戻る' : '⇒ すべてを見る';
     }
+    $('#show-all-abc').addEventListener('click', () => { abcModeAll = !abcModeAll; abcPage = 1; renderAbc(); });
+    $$('[data-page-prev="abc"],[data-page-next="abc"]').forEach(b => b.addEventListener('click', () => { abcPage += b.hasAttribute('data-page-prev') ? -1 : 1; renderAbc(); }));
+    $('#new-abc').addEventListener('click', () => openAbcForm()); $('#cancel-abc').addEventListener('click', () => $('#abc-form').classList.add('hidden'));
+    function openAbcForm(item=null) { editingAbcId = item?.id || null; const f = $('#abc-form'); f.reset(); f.classList.remove('hidden'); f.elements.title.value = item?.title || ''; f.elements.date.value = item?.date || today(); f.elements.solved.value = item?.solved ?? ''; f.elements.result.value = item?.result || ''; f.elements.good.value = item?.good || ''; f.elements.reflection.value = item?.reflection || ''; f.elements.goal.value = item?.goal || ''; $('#abc-form-heading').textContent = item ? 'ABC参加記録を編集' : 'ABC参加記録を書く'; $('#delete-abc').classList.toggle('hidden', !item); f.scrollIntoView({behavior:'smooth',block:'nearest'}); }
+    $('#abc-form').addEventListener('submit', e => { e.preventDefault(); const f=e.currentTarget, fd=new FormData(f); const item={ id:editingAbcId||makeId(), title:fd.get('title').trim(), date:fd.get('date'), solved:fd.get('solved'), result:fd.get('result').trim(), good:fd.get('good').trim(), reflection:fd.get('reflection').trim(), goal:fd.get('goal').trim(), created:Date.now() }; if(editingAbcId) data.abc=data.abc.map(a=>a.id===editingAbcId?{...a,...item}:a); else data.abc.push(item); persist(); f.classList.add('hidden'); abcModeAll=false; renderAbc(); openAbc(item.id); });
+    $('#delete-abc').addEventListener('click', () => { if (!editingAbcId || !confirm('このABC参加記録を削除しますか？')) return; data.abc=data.abc.filter(a=>a.id!==editingAbcId); persist(); $('#abc-form').classList.add('hidden'); $('#abc-detail').classList.add('hidden'); $('#abc-featured').classList.remove('hidden'); renderAbc(); });
+    function openAbc(id) { const a=sortedAbc().find(x=>x.id===id); if(!a)return; activeAbcId=id; $('#abc-featured').classList.add('hidden'); $('#abc-pagination').classList.add('hidden'); $('#abc-form').classList.add('hidden'); $('#abc-detail').classList.remove('hidden'); $('#abc-detail-date').textContent=dateLabel(a.date); $('#abc-detail-title').textContent=a.title; $('#abc-detail-result').textContent=[a.solved!==''&&a.solved!=null?`${a.solved}問 AC`:'',a.result].filter(Boolean).join(' ・ '); $('#abc-detail-good').textContent=a.good||'未記入'; $('#abc-detail-reflection').textContent=a.reflection||'未記入'; $('#abc-detail-goal').textContent=a.goal||'未記入'; const all=sortedAbc(),idx=all.findIndex(x=>x.id===id); $('#abc-prev').disabled=idx>=all.length-1; $('#abc-next').disabled=idx<=0; }
+    function closeAbcDetail() { $('#abc-detail').classList.add('hidden'); $('#abc-featured').classList.remove('hidden'); renderAbc(); }
+    $('#back-to-abc').addEventListener('click', closeAbcDetail); $('#edit-abc').addEventListener('click',()=>openAbcForm(sortedAbc().find(a=>a.id===activeAbcId))); $('#abc-prev').addEventListener('click',()=>moveAbc(-1)); $('#abc-next').addEventListener('click',()=>moveAbc(1));
+    function moveAbc(direction) { const all=sortedAbc(),idx=all.findIndex(x=>x.id===activeAbcId),next=all[idx-direction]; if(next)openAbc(next.id); }
 
-    $('#show-all-abc').addEventListener('click', () => {
-      abcModeAll = !abcModeAll;
-      abcPage = 1;
-      renderAbc();
-    });
-
-    $$('[data-page-prev="abc"],[data-page-next="abc"]').forEach(b =>
-      b.addEventListener('click', () => {
-        abcPage += b.hasAttribute('data-page-prev') ? -1 : 1;
-        renderAbc();
-      })
-    );
-
-    $('#new-abc').addEventListener('click', () => openAbcForm());
-    $('#cancel-abc').addEventListener('click', () =>
-      $('#abc-form').classList.add('hidden')
-    );
-
-    function openAbcForm(item = null) {
-      editingAbcId = item?.id || null;
-      const f = $('#abc-form');
-      f.reset();
-      f.classList.remove('hidden');
-      f.elements.title.value = item?.title || '';
-      f.elements.date.value = item?.date || today();
-      f.elements.solved.value = item?.solved ?? '';
-      f.elements.result.value = item?.result || '';
-      f.elements.good.value = item?.good || '';
-      f.elements.reflection.value = item?.reflection || '';
-      f.elements.goal.value = item?.goal || '';
-      $('#abc-form-heading').textContent = item
-        ? 'ABC参加記録を編集'
-        : 'ABC参加記録を書く';
-      $('#delete-abc').classList.toggle('hidden', !item);
-      f.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
-    }
-
-    $('#abc-form').addEventListener('submit', e => {
-      e.preventDefault();
-      const f = e.currentTarget;
-      const fd = new FormData(f);
-
-      const item = {
-        id: editingAbcId || makeId(),
-        title: fd.get('title').trim(),
-        date: fd.get('date'),
-        solved: fd.get('solved'),
-        result: fd.get('result').trim(),
-        good: fd.get('good').trim(),
-        reflection: fd.get('reflection').trim(),
-        goal: fd.get('goal').trim(),
-        created: Date.now()
-      };
-
-      if (editingAbcId) {
-        data.abc = data.abc.map(a =>
-          a.id === editingAbcId ? { ...a, ...item } : a
-        );
-      } else {
-        data.abc.push(item);
-      }
-
-      persist();
-      f.classList.add('hidden');
-      abcModeAll = false;
-      renderAbc();
-      openAbc(item.id);
-    });
-
-    $('#delete-abc').addEventListener('click', () => {
-      if (!editingAbcId || !confirm('このABC参加記録を削除しますか？')) return;
-
-      data.abc = data.abc.filter(a => a.id !== editingAbcId);
-      persist();
-      $('#abc-form').classList.add('hidden');
-      $('#abc-detail').classList.add('hidden');
-      $('#abc-featured').classList.remove('hidden');
-      renderAbc();
-    });
-
-    function openAbc(id) {
-      const a = sortedAbc().find(x => x.id === id);
-      if (!a) return;
-
-      activeAbcId = id;
-      $('#abc-featured').classList.add('hidden');
-      $('#abc-pagination').classList.add('hidden');
-      $('#abc-form').classList.add('hidden');
-      $('#abc-detail').classList.remove('hidden');
-      $('#abc-detail-date').textContent = dateLabel(a.date);
-      $('#abc-detail-title').textContent = a.title;
-
-      $('#abc-detail-result').textContent = [
-        a.solved !== '' && a.solved != null ? `${a.solved}問 AC` : '',
-        a.result
-      ].filter(Boolean).join(' ・ ');
-
-      $('#abc-detail-good').textContent = a.good || '未記入';
-      $('#abc-detail-reflection').textContent = a.reflection || '未記入';
-      $('#abc-detail-goal').textContent = a.goal || '未記入';
-
-      const all = sortedAbc();
-      const idx = all.findIndex(x => x.id === id);
-      $('#abc-prev').disabled = idx >= all.length - 1;
-      $('#abc-next').disabled = idx <= 0;
-    }
-
-    function closeAbcDetail() {
-      $('#abc-detail').classList.add('hidden');
-      $('#abc-featured').classList.remove('hidden');
-      renderAbc();
-    }
-
-    $('#back-to-abc').addEventListener('click', closeAbcDetail);
-    $('#edit-abc').addEventListener('click', () =>
-      openAbcForm(sortedAbc().find(a => a.id === activeAbcId))
-    );
-    $('#abc-prev').addEventListener('click', () => moveAbc(-1));
-    $('#abc-next').addEventListener('click', () => moveAbc(1));
-
-    function moveAbc(direction) {
-      const all = sortedAbc();
-      const idx = all.findIndex(x => x.id === activeAbcId);
-      const next = all[idx - direction];
-      if (next) openAbc(next.id);
-    }
-
-    renderProblems();
-    renderSubjects();
-    renderDiaries();
-    renderAbc();
+    renderProblems(); renderSubjects(); renderDiaries(); renderAbc();
   </script>
 </body>
 </html>
