@@ -1,0 +1,219 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="日々の記録と、そのとき考えたこと。">
+    <title>日記 | AtogawaConan</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .article-page {
+            max-width: 1100px;
+            margin: 50px auto;
+            padding: 24px;
+            color: #26364a;
+        }
+
+        .article-top {
+            padding: 30px;
+            background: #26364a;
+            color: white;
+            border-radius: 14px;
+        }
+
+        .article-top a {
+            color: #d8e5f3;
+            text-decoration: none;
+        }
+
+        .article-label {
+            margin-top: 28px;
+            color: #526982;
+            font-size: 0.85rem;
+            letter-spacing: 0.12em;
+        }
+
+        .article-date {
+            margin-top: 30px;
+            color: #60758f;
+            font-size: 0.9rem;
+        }
+
+        #article-title {
+            font-size: clamp(1.8rem, 4vw, 2.7rem);
+            line-height: 1.5;
+            margin: 12px 0 28px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid #d8e0e9;
+        }
+
+        .article-content {
+            padding: 28px;
+            background: white;
+            border: 1px solid #d8e0e9;
+            border-radius: 12px;
+            margin-top: 20px;
+        }
+
+        #article-body {
+            line-height: 2.1;
+            white-space: pre-wrap;
+            overflow-wrap: anywhere;
+        }
+
+        #article-image {
+            display: block;
+            width: 100%;
+            max-height: 560px;
+            object-fit: contain;
+            margin-top: 24px;
+            border-radius: 8px;
+        }
+
+        .article-navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 35px;
+            padding-top: 20px;
+            border-top: 1px solid #d8e0e9;
+        }
+
+        .article-navigation a {
+            color: #344b65;
+            text-decoration: none;
+            padding: 10px 14px;
+            background: #edf2f8;
+            border-radius: 7px;
+        }
+
+        .article-error {
+            padding: 24px;
+            background: #f0f3f7;
+            border-radius: 10px;
+            line-height: 1.9;
+        }
+
+        @media (max-width: 600px) {
+            .article-page {
+                margin: 20px auto;
+                padding: 14px;
+            }
+
+            .article-top,
+            .article-content {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <main class="article-page">
+        <header class="article-top">
+            <a href="index.html#diary">← 日記一覧に戻る</a>
+            <p>DIARY / JOURNAL</p>
+            <h1>日々の記録</h1>
+        </header>
+
+        <p class="article-label">MY DIARY</p>
+
+        <article id="article" class="article-content" hidden>
+            <div id="article-date" class="article-date"></div>
+            <h2 id="article-title"></h2>
+            <div id="article-body"></div>
+            <img id="article-image" alt="" hidden>
+
+            <nav class="article-navigation">
+                <a id="previous-article" href="#" hidden>← 前の日記</a>
+                <a href="index.html#diary">日記一覧へ</a>
+                <a id="next-article" href="#" hidden>次の日記 →</a>
+            </nav>
+        </article>
+
+        <div id="article-error" class="article-error" hidden>
+            <h2>日記を表示できません</h2>
+            <p>
+                指定された日記が見つからないか、
+                このブラウザに日記データが保存されていません。
+            </p>
+            <a href="index.html#diary">日記一覧に戻る</a>
+        </div>
+    </main>
+
+    <script>
+        const STORAGE_KEY = 'atogawaPortfolioData_v1';
+
+        const escapeText = value => String(value ?? '');
+
+        const formatDate = value =>
+            value ? value.replaceAll('-', '.') : '';
+
+        function loadDiaries() {
+            try {
+                const saved = JSON.parse(
+                    localStorage.getItem(STORAGE_KEY) || '{}'
+                );
+                return Array.isArray(saved.diaries) ? saved.diaries : [];
+            } catch {
+                return [];
+            }
+        }
+
+        function articleUrl(id) {
+            return 'diary.html?id=' + encodeURIComponent(id);
+        }
+
+        const diaries = loadDiaries().sort((a, b) =>
+            (b.date || '').localeCompare(a.date || '') ||
+            (b.created || 0) - (a.created || 0)
+        );
+
+        const params = new URLSearchParams(window.location.search);
+        const id = params.get('id');
+        const index = diaries.findIndex(d => d.id === id);
+        const article = diaries[index];
+
+        if (!article) {
+            document.querySelector('#article-error').hidden = false;
+        } else {
+            document.querySelector('#article').hidden = false;
+            document.querySelector('#article-date').textContent =
+                formatDate(article.date);
+            document.querySelector('#article-title').textContent =
+                escapeText(article.title);
+            document.querySelector('#article-body').textContent =
+                escapeText(article.body);
+
+            const image = document.querySelector('#article-image');
+
+            if (article.image) {
+                image.src = article.image;
+                image.alt = article.title || '日記の写真';
+                image.hidden = false;
+            }
+
+            // 日付順で、前後の日記へ移動する
+            const previous = diaries[index + 1];
+            const next = diaries[index - 1];
+
+            if (previous) {
+                const link = document.querySelector('#previous-article');
+                link.href = articleUrl(previous.id);
+                link.hidden = false;
+            }
+
+            if (next) {
+                const link = document.querySelector('#next-article');
+                link.href = articleUrl(next.id);
+                link.hidden = false;
+            }
+
+            document.title =
+                (article.title || '日記') + ' | AtogawaConan';
+        }
+    </script>
+</body>
+</html>
