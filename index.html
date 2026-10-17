@@ -338,7 +338,12 @@
     function renderDiaries() {
       const items = sortedDiaries(); const shown = diaryModeAll ? items.slice((diaryPage-1)*20, diaryPage*20) : items.slice(0,5);
       $('#diary-featured').innerHTML = shown.length ? shown.map(d => `<button class="diary-row" data-diary-id="${escapeHtml(d.id)}"><span class="diary-date">${escapeHtml(dateLabel(d.date))}</span><strong>${escapeHtml(d.title)}</strong><span class="diary-arrow">→</span></button>`).join('') : '<p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p>';
-      $$('[data-diary-id]').forEach(b => b.addEventListener('click', () => openDiary(b.dataset.diaryId)));
+      $$('[data-diary-id]').forEach(b => {
+    b.addEventListener('click', () => {
+        const id = b.dataset.diaryId;
+        window.location.href = `diary.html?id=${encodeURIComponent(id)}`;
+    });
+});
       const pages = Math.max(1, Math.ceil(items.length/20)); $('#diary-pagination').classList.toggle('hidden', !diaryModeAll); $('#diary-page-label').textContent = `${diaryPage} / ${pages}`;
       $$('[data-page-prev="diary"],[data-page-next="diary"]').forEach(b => b.disabled = b.hasAttribute('data-page-prev') ? diaryPage <= 1 : diaryPage >= pages);
       $('#show-all-diary').textContent = diaryModeAll ? '⇒ 最新の日記に戻る' : '⇒ すべての日記を見る';
