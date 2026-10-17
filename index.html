@@ -122,22 +122,126 @@
         
 
     <section class="section reveal" id="diary">
-      <div class="section-heading"><span class="section-number">04</span><div><p class="eyebrow">DAILY NOTES</p><h2>日記</h2></div></div>
-      <p class="section-lead">日々の出来事や、ちょっとした気づきを記録します。</p>
-      <div class="section-tools"><button class="small-button" id="new-diary">＋ 日記を書く</button><label class="date-tool">日付を選択 <input type="date" id="diary-date-picker" aria-label="日付を選択"></label></div>
-      <div id="diary-featured" class="diary-list"><p class="empty-state">日記はまだありません。最初の日記を書いてみよう。</p></div>
-      <div class="list-footer"><button class="text-button" id="show-all-diary">⇒ すべての日記を見る</button><div class="pagination hidden" id="diary-pagination"><button class="small-button" data-page-prev="diary">← 前へ</button><span id="diary-page-label">1 / 1</span><button class="small-button" data-page-next="diary">次へ →</button></div></div>
-      <form id="diary-form" class="entry-form hidden">
-        <div class="editor-title-row"><h3 id="diary-form-heading">日記を書く</h3><button type="button" class="text-button" id="cancel-diary">閉じる</button></div>
-        <label>タイトル<input name="title" required maxlength="100" placeholder="日記のタイトル"></label>
-        <label>日付<input name="date" type="date" required></label>
-        <label>ひとこと・本文<textarea name="body" rows="5" required placeholder="今日あったこと、思ったことなど"></textarea></label>
-        <label>写真URL（任意）<input name="image" type="url" placeholder="画像URLを貼り付け"></label>
-        <label>または写真ファイルを選択<input name="imageFile" type="file" accept="image/*"><small class="field-help">画像ファイルは1MB以下を推奨します。選んだ写真はこのブラウザ内に保存されます。</small></label>
-        <div class="form-actions"><button type="submit" class="button button-primary">保存する</button><button type="button" class="button button-muted" id="delete-diary">削除</button></div>
-      </form>
-      <article id="diary-detail" class="entry-detail hidden"><div class="detail-top"><button class="text-button" id="back-to-diaries">← 一覧に戻る</button><span id="diary-detail-date"></span></div><h3 id="diary-detail-title"></h3><img id="diary-detail-image" class="detail-image hidden" alt="日記の写真"><p id="diary-detail-body" class="detail-body"></p><div class="detail-navigation"><button class="small-button" id="diary-prev">← 前の日記</button><button class="small-button" id="edit-diary">編集する</button><button class="small-button" id="diary-next">次の日記 →</button></div></article>
-    </section>
+  <div class="section-heading">
+    <span class="section-number">04</span>
+    <div>
+      <p class="eyebrow">DAILY NOTES</p>
+      <h2>日記</h2>
+    </div>
+  </div>
+
+  <p class="section-lead">
+    日々の出来事や、ちょっとした気づきを記録します。
+  </p>
+
+  <!-- 日記を追加 -->
+  <div class="section-tools diary-tools">
+    <button class="small-button" id="new-diary">＋ 日記を書く</button>
+  </div>
+
+  <!-- 日記5件を縦に表示 -->
+  <div id="diary-featured" class="diary-list">
+    <p class="empty-state">
+      日記はまだありません。最初の日記を書いてみよう。
+    </p>
+  </div>
+
+  <!-- 日記の一覧・日付検索 -->
+  <div class="diary-bottom-links">
+    <button class="text-button" id="show-all-diary">
+      ⇒ すべての日記を見る
+    </button>
+
+    <label class="diary-date-search">
+      <span>⇒ 日付から日記を探す</span>
+      <input
+        type="date"
+        id="diary-date-picker"
+        aria-label="日付から日記を探す"
+      >
+    </label>
+  </div>
+
+  <!-- 一覧のページ切り替え -->
+  <div class="pagination hidden" id="diary-pagination">
+    <button class="small-button" data-page-prev="diary">
+      ← 前へ
+    </button>
+    <span id="diary-page-label">1 / 1</span>
+    <button class="small-button" data-page-next="diary">
+      次へ →
+    </button>
+  </div>
+
+  <!-- 日記の追加・編集フォーム -->
+  <form id="diary-form" class="entry-form hidden">
+    <div class="editor-title-row">
+      <h3 id="diary-form-heading">日記を書く</h3>
+      <button type="button" class="text-button" id="cancel-diary">
+        閉じる
+      </button>
+    </div>
+
+    <label>
+      タイトル
+      <input name="title" required maxlength="100" placeholder="日記のタイトル">
+    </label>
+
+    <label>
+      日付
+      <input name="date" type="date" required>
+    </label>
+
+    <label>
+      ひとこと・本文
+      <textarea name="body" rows="5" required placeholder="今日あったこと、思ったことなど"></textarea>
+    </label>
+
+    <label>
+      写真URL（任意）
+      <input name="image" type="url" placeholder="画像URLを貼り付け">
+    </label>
+
+    <label>
+      または写真ファイルを選択
+      <input name="imageFile" type="file" accept="image/*">
+      <small class="field-help">
+        写真は1MB以下を推奨します。
+      </small>
+    </label>
+
+    <div class="form-actions">
+      <button type="submit" class="button button-primary">保存する</button>
+      <button type="button" class="button button-muted" id="delete-diary">削除</button>
+    </div>
+  </form>
+
+  <!-- 日記の詳細 -->
+  <article id="diary-detail" class="entry-detail hidden">
+    <div class="detail-top">
+      <button class="text-button" id="back-to-diaries">
+        ← 一覧に戻る
+      </button>
+      <span id="diary-detail-date"></span>
+    </div>
+
+    <h3 id="diary-detail-title"></h3>
+
+    <img
+      id="diary-detail-image"
+      class="detail-image hidden"
+      alt="日記の写真"
+    >
+
+    <p id="diary-detail-body" class="detail-body"></p>
+
+    <div class="detail-navigation">
+      <button class="small-button" id="diary-prev">← 前の日記</button>
+      <button class="small-button" id="edit-diary">編集する</button>
+      <button class="small-button" id="diary-next">次の日記 →</button>
+    </div>
+  </article>
+</section>
 
     <section class="section reveal" id="abc">
       <div class="section-heading"><span class="section-number">05</span><div><p class="eyebrow">ATCODER CONTEST LOG</p><h2>ABC参加記録</h2></div></div>
